@@ -1,0 +1,16 @@
+# secrets — never commit
+*.token
+*.key
+*.pem
+.env
+.env.*
+**/secrets*
+**/credentials.json
+*password*
+*secret*
+
+# noise
+.DS_Store
+node_modules/
+*.log
+Thumbs.db

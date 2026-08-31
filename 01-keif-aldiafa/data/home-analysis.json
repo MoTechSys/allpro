@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "status": "ok",
+  "message": "success",
+  "data": {
+    "results": [
+      {
+        "url": "https://www.genspark.ai/api/files/s/c2Jpfn25?token=Z0FBQUFBQnFrbHpYUWNPUVpUVjFlTmN5amNuY2o1TzIya0pEd0NqU2hnakFVNDA0YWx2SVhva2NkZVpYNWFwVWxDaE93bUJ0RjNOWUE4bjluS2t5Q3B3dDFLaGdhNFI5TkxORXg1WUdGbzVQREFZaHJjRWx6eHlQMkJZSlZCT3RFMk9ZWGVTWlFsd0pmQ29icTk5aVlQaTNFYmFVZDZlaWlxWTNSMkJnbFBSdE5ETUpDYmxOMGpZclE3LU9uOWlnNUxJRlM1Vmk5Q2UxdlRzWnhacGtXM3BpRXZSWDZVY1NHXy1rWkVXMWNPay1qN3VTeENKaVVOa3ViVWVHRnBHRGJZcEd6WER5TXEwY2FLd3QwQ2FQX05ZSzFNNUtNMTJLaUE9PQ",
+        "result": "تحليل واجهة موقع «كيف الضيافة» (النسخة الجوالة):\n\n1. **قاعدة الـ 5 ثوانٍ وتقييم الهيرو (Hero Section):**\n   - يتضح من الوهلة الأولى أن الموقع يقدم خدمات ضيافة قهوة فاخرة في السعودية. الهيرو جذاب للغاية وبصريًا ممتاز بفضل تباين الألوان الذهبية والبيضاء على الخلفية الداكنة، مع إبراز الشعار وعبارة التأسيس «Since 2016» واللقب «Keif Al-Diafa - Luxury Hospitality».\n\n2. **الفخامة والتوجه البصري:**\n   - التصميم يعكس هوية VIP فاخرة وراقية بفضل استخدام اللون الذهبي المطفأ مع الأسود الفخم والخطوط الأنيقة. التصميم متناسق ويبتعد تمامًا عن المظهر المبتدئ.\n\n3. **تقييم العيوب وتفاصيل التصميم:**\n   - **تكرار البراند قبل H1:** يظهر شعار البراند مصغرًا في الهيدر، ثم يليه الشعار الرئيسي الكبير «كيف الضيافة» في الهيرو. هذا التكرار مقبول تقنيًا للهوية البصرية للجوال لتعزيز العلامة التجارية.\n   - **الأزرار العائمة والـ CTA:** تظهر أزرار الاتصال السريع (واتساب، اتصال، القائمة) بشكل شريط سفلي عائم مريح جدًا للاستخدام وتسهيل التواصل السريع.\n   - **الإيموجي الملونة:** تم تجنب استخدام الإيموجيات الملونة الرخيصة، واستُخدمت نقاط ذهبية أنيقة كرموز للقوائم.\n   - **النصوص المبتورة والصور:** لا توجد نصوص مقطوعة بعلامة «...» في الواجهة المعروضة. قسم شركاء النجاح يعرض شعارات الشركات بوضوح وبتنسيق متناسق ومريح للعين.\n\n4. **نوع الأرقام المستخدمة:**\n   - تم استخدام الأرقام اللاتينية (مثل: 2016، 966+) وهي مفضلة في تصميم الويب الحديث لضمان التوافق وتسهيل القراءة السريعة.\n\n5. **وضوح الـ CTA (أزرار الدعوة للإجراء):**\n   - أزرار الدعوة للإجراء واضحة جدًا في الهيرو: زر رئيسي بارز باللون الذهبي «احجز الآن» وزر ثانوي مفرغ «اكتشف خدماتنا»، مما يمنح المستخدم تسلسلًا هرميًا ممتازًا لاتخاذ القرار البصري.",
+        "validate": true
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "valid": 1,
+      "invalid": 0
+    }
+  },
+  "session_state": {
+    "render_template": "understand_images_result",
+    "preparing": false,
+    "understood_images": [
+      {
+        "model": "gemini-3.5-flash",
+        "width": 1024,
+        "height": 1024
+      }
+    ],
+    "has_aspect_ratio": true
+  }
+}

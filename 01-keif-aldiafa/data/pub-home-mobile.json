@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "status": "ok",
+  "message": "success",
+  "data": {
+    "result": "screenshot captured (780x10944px) and saved to https://www.genspark.ai/api/files/s/ODAmyEug (inline preview shows the first 2500px; the saved file has the full height)"
+  },
+  "session_state": null
+}

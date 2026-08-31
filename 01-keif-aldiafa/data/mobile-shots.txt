@@ -1,0 +1,6 @@
+home https://www.genspark.ai/api/files/s/c2Jpfn25
+services https://www.genspark.ai/api/files/s/iLFLqX82
+offerings https://www.genspark.ai/api/files/s/uVlOpcY8
+portfolio https://www.genspark.ai/api/files/s/h95fYnbO
+about https://www.genspark.ai/api/files/s/j5bTYFfh
+contact https://www.genspark.ai/api/files/s/uEPpwY7l
