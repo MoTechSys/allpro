@@ -1,0 +1,230 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "صبابين قهوة جدة"
+      ],
+      "clicks": 7,
+      "impressions": 187,
+      "ctr": 0.0374331550802139,
+      "position": 6.358288770053476
+    },
+    {
+      "keys": [
+        "صبابين قهوة بجدة"
+      ],
+      "clicks": 5,
+      "impressions": 235,
+      "ctr": 0.021276595744680851,
+      "position": 5.6127659574468085
+    },
+    {
+      "keys": [
+        "ضيافة زواجات جدة"
+      ],
+      "clicks": 4,
+      "impressions": 34,
+      "ctr": 0.11764705882352941,
+      "position": 5.7352941176470589
+    },
+    {
+      "keys": [
+        "ضيافة للمناسبات جدة"
+      ],
+      "clicks": 4,
+      "impressions": 92,
+      "ctr": 0.043478260869565216,
+      "position": 5.4673913043478262
+    },
+    {
+      "keys": [
+        "ضيافات جدة"
+      ],
+      "clicks": 2,
+      "impressions": 42,
+      "ctr": 0.047619047619047616,
+      "position": 6.4047619047619051
+    },
+    {
+      "keys": [
+        "قهوجيين جدة"
+      ],
+      "clicks": 2,
+      "impressions": 78,
+      "ctr": 0.02564102564102564,
+      "position": 4.615384615384615
+    },
+    {
+      "keys": [
+        "مباشرات ضيافة جدة"
+      ],
+      "clicks": 2,
+      "impressions": 67,
+      "ctr": 0.029850746268656716,
+      "position": 7.7910447761194028
+    },
+    {
+      "keys": [
+        "صبابات جدة"
+      ],
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 6.75
+    },
+    {
+      "keys": [
+        "صبابات قهوة جدة"
+      ],
+      "clicks": 1,
+      "impressions": 100,
+      "ctr": 0.01,
+      "position": 6.43
+    },
+    {
+      "keys": [
+        "ضيافة جده"
+      ],
+      "clicks": 1,
+      "impressions": 8,
+      "ctr": 0.125,
+      "position": 5.5
+    },
+    {
+      "keys": [
+        "ضيافة مناسبات جدة"
+      ],
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 5.55
+    },
+    {
+      "keys": [
+        "ضيافه جده"
+      ],
+      "clicks": 1,
+      "impressions": 8,
+      "ctr": 0.125,
+      "position": 6.5
+    },
+    {
+      "keys": [
+        "معجنات للمناسبات في جدة"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 6
+    },
+    {
+      "keys": [
+        "qahwa جدة"
+      ],
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 8.6341463414634134
+    },
+    {
+      "keys": [
+        "اماكن تواجدها"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "ايجار طاولات وكراسي جدة"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "تجهيز حفلات جدة"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "keys": [
+        "تقديمات جدة"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "صبابه جده"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "صبابين قهوه بجده"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.75
+    },
+    {
+      "keys": [
+        "ضيافة الفعاليات والحفلات بجدة"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 3.7142857142857144
+    },
+    {
+      "keys": [
+        "ضيافة جدة"
+      ],
+      "clicks": 0,
+      "impressions": 42,
+      "ctr": 0,
+      "position": 9.5952380952380949
+    },
+    {
+      "keys": [
+        "ضيافة وتقديمات جدة"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 3.3333333333333335
+    },
+    {
+      "keys": [
+        "ضيافة_زواجات جدة"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4.3333333333333339
+    },
+    {
+      "keys": [
+        "ضيافه جدة"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}
