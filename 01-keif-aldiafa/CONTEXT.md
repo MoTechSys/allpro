@@ -1,6 +1,8 @@
 # مهمة: سيطرة «كيف الضيافة» على سوق الضيافة السعودي
 
-## المصادر (كلها مسحوبة محلياً)
+> ⚠️ **تنبيه صلاحية (2026-09-01):** هذا الملف لقطة تأسيسية من بيئة وكيل سابق — المسارات المحلية أدناه (`/home/work/.openclaw/...`) **لا تصلح لأي بيئة جديدة**، وبعض الكشوف عولجت لاحقاً (مثلاً schema صارت CateringService + priceRange "$$-$$$$" في W0). الحالة الصحيحة دائماً: `02-context-memory/BOOTSTRAP.md` → `HANDOFF-2026-09-01.md` → `STATE.md`. المستودعات تُستنسخ من GitHub مباشرة (MoTechSys/keif-aldiafa-web · allpro · مراجع: royal-coffee-docs, osoul-aldiafa-v2).
+
+## المصادر (كلها مسحوبة محلياً — بيئة قديمة)
 - **المستودع الرئيسي (اعمل عليه):** `/home/work/.openclaw/workspace/projects/keif-domination/sources/keif-aldiafa-web` — Next.js 14 App Router, 48 صفحة SSG, 426 صورة
 - مرجع competitor analysis: `sources/royal-coffee-docs` (research/competitor-analysis/ANALYSIS.md, docs/04-seo.md, docs/07-decisions.md)
 - مرجع SEO guards + قواعد ذهبية: `sources/osoul-aldiafa-v2` (scripts/seo-guard.mjs, similarity-check.mjs, docs/99-archive/plan-ar/07-قواعد-السيو-الملزمة.md)
