@@ -1,0 +1,9 @@
+{
+  // نشر نموذج الصفحة الرئيسية (prototype-home) كموقع ثابت — للمراجعة فقط، لا علاقة له بإنتاج keif-v2
+  "name": "keif-prototype-home",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./prototype-home",
+    "not_found_handling": "single-page-application"
+  }
+}
