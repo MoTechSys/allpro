@@ -3,273 +3,328 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>كيف الضيافة — نموذج الصفحة الرئيسية v2 (للمراجعة)</title>
-<meta name="description" content="نموذج تجريبي v2 للصفحة الرئيسية: فهرس بصري لخدمات كيف الضيافة — للجهات الحكومية والمؤسسات، والشركات، والمناسبات.">
+<title>كيف الضيافة — نموذج الصفحة الرئيسية v3 (للمراجعة)</title>
+<meta name="description" content="نموذج تجريبي v3 للصفحة الرئيسية — كيف الضيافة: ضيافة فاخرة للجهات الحكومية والشركات والمناسبات.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#0f0f0f">
-<meta property="og:title" content="كيف الضيافة — أعمالنا">
-<meta property="og:description" content="قهوجيين وصبابين وضيافة فاخرة للجهات والشركات والمناسبات — +500 مناسبة منذ 2016.">
+<meta name="theme-color" content="#0B1F3A">
+<meta property="og:title" content="كيف الضيافة — ضيافة فاخرة للجهات والشركات والمناسبات">
+<meta property="og:description" content="قهوجيين وصبابين بزي رسمي وتقديمات فاخرة — +500 مناسبة منذ 2016.">
 <meta property="og:image" content="img/og.jpg">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" href="img/logo-emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
+/* =========================================================
+   v3 — لوحة ثلاثية صارمة: كحلي / ذهبي / أبيض
+   ========================================================= */
 :root{
-  --bg:#0f0f0f;--bg2:#161410;--card:rgba(20,16,6,.55);--line:rgba(212,160,23,.22);
-  --gold:#D4A017;--gold2:#B8860B;--gold-soft:#E8C766;--cream:#F5F5DC;--ink:#1a1408;
-  --text:#F3EEDC;--muted:rgba(243,238,220,.72);--wa:#25D366;
-  --r:16px;--pad:16px;--top:82px; /* ribbon 22 + header 60 */
+  --navy:#0B1F3A;--navy-2:#10294A;--navy-3:#163460;
+  --gold:#C9A227;--gold-2:#E3C56B;--gold-3:#9C7A14;
+  --white:#FFFFFF;--paper:#F7F5F0;
+  --ink:#0B1F3A;--ink-2:rgba(11,31,58,.80);--ink-3:rgba(11,31,58,.64);
+  --on-navy:#FFFFFF;--on-navy-2:rgba(255,255,255,.78);--on-navy-3:rgba(255,255,255,.58);
+  --line-navy:rgba(255,255,255,.12);--line-paper:rgba(11,31,58,.10);--line-gold:rgba(201,162,39,.45);
+  --wa:#25D366;
+  --r:14px;--pad:20px;
+  --ribbon:22px;--header:64px;--bar:46px;
+  --top:calc(var(--ribbon) + var(--header));
+  --f-display:'El Messiri','Almarai',system-ui,sans-serif;
+  --f-body:'Almarai',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--top) + 52px)}
-body{padding-top:22px;background:var(--bg);color:var(--text);font-family:'Tajawal',system-ui,sans-serif;font-size:16px;line-height:1.75;overflow-x:hidden}
-h1,h2,h3,.cairo{font-family:'Cairo','Tajawal',sans-serif}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--top) + var(--bar) + 8px)}
+body{padding-top:var(--ribbon);background:var(--navy);color:var(--on-navy);font-family:var(--f-body);font-size:16px;line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.35;letter-spacing:-.005em}
 img,video{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;background:none;border:0;color:inherit}
-.wrap{padding-inline:var(--pad);max-width:520px;margin-inline:auto}
-@media (min-width:900px){.wrap{max-width:1160px;--pad:32px}}
-section{padding-block:44px}
-@media (min-width:900px){section{padding-block:72px}}
-.eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.28em;text-align:center;margin-bottom:8px}
-h2{font-size:clamp(1.45rem,5.2vw,2.3rem);font-weight:800;line-height:1.35;text-align:center;margin-bottom:8px}
-.lead{color:var(--muted);text-align:center;font-size:.98rem;margin-bottom:22px;max-width:60ch;margin-inline:auto}
-.gold-line{width:56px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:10px auto 18px}
+figure{margin:0}
+.wrap{padding-inline:var(--pad);max-width:560px;margin-inline:auto}
+@media (min-width:900px){.wrap{max-width:1180px;--pad:40px}}
+section{padding-block:56px}
+@media (min-width:900px){section{padding-block:96px}}
 
-/* ===== reveal motion (respects reduced motion) ===== */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+/* الخامة: حبيبات دقيقة على الكحلي */
+.grain{position:relative}
+.grain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.055;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.grain>*{position:relative}
+
+/* سطوح */
+.on-paper{background:var(--paper);color:var(--ink)}
+.on-white{background:var(--white);color:var(--ink)}
+.on-navy{background:var(--navy);color:var(--on-navy)}
+.on-navy-2{background:var(--navy-2);color:var(--on-navy)}
+
+/* عناوين الأقسام */
+.sec-head{text-align:center;margin-bottom:28px}
+.sec-head .label{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--gold);margin-bottom:10px}
+.sec-head .label::before,.sec-head .label::after{content:"";width:22px;height:1px;background:var(--gold);opacity:.7}
+.sec-head h2{font-size:clamp(1.55rem,5.6vw,2.4rem)}
+.sec-head p{margin-top:8px;font-size:.98rem;max-width:56ch;margin-inline:auto}
+.on-paper .sec-head p,.on-white .sec-head p{color:var(--ink-2)}
+.on-navy .sec-head p,.on-navy-2 .sec-head p{color:var(--on-navy-2)}
+@media (min-width:900px){.sec-head{margin-bottom:40px}}
+
+/* حركة الظهور */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
-/* ribbon */
-.proto{position:fixed;top:0;inset-inline:0;z-index:70;background:#7a1f1f;color:#fff;font-size:.72rem;text-align:center;padding:4px 8px;letter-spacing:.05em;height:22px;line-height:14px}
-/* header */
-header{position:sticky;top:22px;z-index:60;background:rgba(15,15,15,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{width:40px;height:40px;border-radius:50%;border:1px solid var(--line)}
-.brand b{font-family:'Cairo';font-size:1.05rem;color:var(--gold-soft)}
-.brand small{display:block;font-size:.62rem;letter-spacing:.2em;color:var(--muted);font-family:'Tajawal'}
-.nav-right{display:flex;align-items:center;gap:10px}
-.pill{border:1px solid var(--gold2);color:var(--gold-soft);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:700;white-space:nowrap}
-.wa-ico{width:40px;height:40px;border-radius:50%;background:var(--wa);display:grid;place-items:center}
-.wa-ico svg{width:22px;height:22px;fill:#fff}
+/* شريط النموذج */
+.proto{position:fixed;top:0;inset-inline:0;z-index:80;background:#5A1414;color:#fff;font-size:.7rem;text-align:center;height:var(--ribbon);line-height:var(--ribbon);letter-spacing:.04em}
 
-/* ===== sticky index bar (الفهرس) ===== */
-.subnav{position:sticky;top:var(--top);z-index:55;background:rgba(15,15,15,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.subnav .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
-.subnav .wrap::-webkit-scrollbar{display:none}
-.subnav a{flex:none;font-size:.82rem;font-weight:700;color:var(--muted);border:1px solid transparent;border-radius:999px;padding:5px 12px;white-space:nowrap;transition:.25s}
-.subnav a.on{color:var(--ink);background:var(--gold);border-color:var(--gold)}
-@media (min-width:900px){.subnav .wrap{justify-content:center;gap:10px}.subnav a{font-size:.9rem;padding:6px 16px}}
+/* ===== الهيدر ===== */
+header{position:sticky;top:var(--ribbon);z-index:70;background:rgba(11,31,58,.82);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line-navy)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--header)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:44px;width:auto}
+.brand .word{display:flex;flex-direction:column;line-height:1.1}
+.brand .word b{font-family:var(--f-display);font-weight:700;font-size:1.12rem;color:var(--white)}
+.brand .word small{font-size:.6rem;letter-spacing:.24em;color:var(--gold-2);font-weight:700;margin-top:3px}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-link{display:none}
+@media (min-width:900px){
+  .brand img{height:50px}
+  .nav-right{gap:22px}
+  .nav-link{display:inline-block;font-weight:700;font-size:.95rem;color:var(--on-navy-2);padding:6px 2px;border-bottom:1px solid transparent;transition:.25s}
+  .nav-link:hover{color:var(--white);border-color:var(--gold)}
+}
 
-/* ===== hero ===== */
-.hero{position:relative;min-height:calc(100svh - var(--top));max-height:820px;display:flex;align-items:flex-end;padding:0 0 28px;overflow:hidden;background:#000}
+/* ===== نظام الأزرار (حديث، بلا حدود مزدوجة ولا توهّج) ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;padding:0 22px;height:52px;font-weight:700;font-size:1rem;white-space:nowrap;transition:transform .2s cubic-bezier(.2,.7,.2,1),background .2s,color .2s,box-shadow .2s;will-change:transform}
+.btn:active{transform:scale(.985)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 1px 0 rgba(255,255,255,.25) inset}
+.btn-gold:hover{background:var(--gold-2)}
+.btn-glass{background:rgba(255,255,255,.10);color:var(--white);border:1px solid rgba(255,255,255,.34)}
+.btn-glass:hover{background:rgba(255,255,255,.16)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-3)}
+.btn-outline{border:1px solid var(--line-gold);color:var(--navy);background:transparent}
+.btn-outline:hover{background:rgba(201,162,39,.08)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{filter:brightness(1.05)}
+.btn-sm{height:42px;padding:0 16px;font-size:.92rem;border-radius:10px}
+.btn-block{width:100%}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--gold);border-bottom:1px solid transparent;transition:.2s}
+.link-arrow:hover{border-color:var(--gold)}
+
+/* ===== الهيرو ===== */
+.hero{position:relative;min-height:calc(100svh - var(--top));max-height:860px;display:flex;align-items:flex-end;padding:0 0 34px;overflow:hidden;background:var(--navy)}
 .hero .bg{position:absolute;inset:0;z-index:0}
 .hero .bg video,.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center}
 .hero .bg picture{display:none}
-.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,15,15,.25) 0%,rgba(15,15,15,.25) 35%,rgba(15,15,15,.94) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,31,58,.18) 0%,rgba(11,31,58,.28) 38%,rgba(11,31,58,.86) 72%,var(--navy) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
-.hero .kicker{color:var(--gold);font-size:.8rem;letter-spacing:.26em;margin-bottom:8px}
-.hero h1{font-size:clamp(1.65rem,6.4vw,3.1rem);font-weight:800;line-height:1.35;color:var(--gold-soft);margin-bottom:10px;text-wrap:balance}
-.hero p.sub{color:var(--text);font-size:1.02rem;margin-bottom:16px;max-width:38ch}
-.proof{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.proof span{background:rgba(212,160,23,.14);border:1px solid var(--line);color:var(--gold-soft);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:14px;padding:14px 22px;font-weight:800;font-size:1.02rem;min-height:50px;width:100%;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold2));color:var(--ink);box-shadow:0 8px 28px rgba(212,160,23,.28)}
-.btn-ghost{border:1px solid var(--line);color:var(--gold-soft);background:rgba(15,15,15,.4)}
-.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 28px rgba(37,211,102,.25)}
-.btn svg{width:22px;height:22px;flex:none}
-.hero .cta2{display:grid;gap:10px}
-.hero .hint{margin-top:12px;font-size:.82rem;color:var(--muted)}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;color:var(--gold-2);font-size:.82rem;font-weight:700;letter-spacing:.06em;margin-bottom:14px}
+.hero .kicker::before{content:"";width:26px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(1.9rem,7.4vw,3.4rem);font-weight:700;color:var(--white);margin-bottom:12px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--gold-2)}
+.hero p.sub{color:var(--on-navy-2);font-size:1.02rem;line-height:1.85;margin-bottom:22px;max-width:40ch}
+.hero .cta{display:grid;gap:10px}
+.hero .proof{display:flex;align-items:center;gap:14px;margin-top:22px;padding-top:16px;border-top:1px solid var(--line-navy);color:var(--on-navy-2);font-size:.86rem}
+.hero .proof b{display:block;font-family:var(--f-display);font-size:1.35rem;color:var(--white);line-height:1.1}
+.hero .proof span{display:flex;flex-direction:column}
+.hero .proof i{width:1px;height:30px;background:var(--line-navy)}
 .vcard{display:none}
 @media (min-width:900px){
-  .hero{min-height:0;height:min(78vh,760px);align-items:center;padding:0}
+  .hero{min-height:0;height:min(80vh,780px);align-items:center;padding:0}
   .hero .bg video.mobile-only{display:none}
   .hero .bg picture{display:block;height:100%}
-  .hero .bg img{animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
-  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+  .hero .bg img{animation:kb 24s ease-in-out infinite alternate;transform-origin:60% 40%}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
   @media (prefers-reduced-motion:reduce){.hero .bg img{animation:none}}
-  .hero::after{background:linear-gradient(90deg,rgba(15,15,15,.92) 0%,rgba(15,15,15,.72) 42%,rgba(15,15,15,.25) 100%)}
-  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px}
-  .hero .cta2{grid-template-columns:1fr 1fr;max-width:520px}
-  .hero .btn{width:auto;min-width:220px}
-  /* the motion card: portrait coffee video framed in gold, no cropping */
-  .vcard{display:block;position:relative;justify-self:start;width:300px;aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:1px solid rgba(212,160,23,.55);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 8px rgba(212,160,23,.08)}
+  .hero::after{background:linear-gradient(90deg,rgba(11,31,58,.96) 0%,rgba(11,31,58,.80) 45%,rgba(11,31,58,.30) 100%)}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
+  .hero .cta{grid-template-columns:auto auto;justify-content:start;gap:12px}
+  .hero .btn{min-width:200px}
+  .hero p.sub{font-size:1.12rem}
+  .vcard{display:block;position:relative;justify-self:start;width:310px;aspect-ratio:9/16;border-radius:20px;overflow:hidden;border:1px solid var(--line-gold);box-shadow:0 40px 90px rgba(0,0,0,.55)}
   .vcard video{width:100%;height:100%;object-fit:cover}
-  .vcard span{position:absolute;bottom:12px;inset-inline:12px;text-align:center;font-size:.8rem;color:var(--gold-soft);background:rgba(10,8,3,.6);border:1px solid var(--line);border-radius:10px;padding:6px}
 }
 
-/* ===== index tiles («ابدأ من هنا») ===== */
-.index{background:var(--bg2);padding-block:28px}
-.idx{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.idx a{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center;display:grid;gap:6px;justify-items:center;transition:border-color .25s,transform .25s}
-.idx a:hover{border-color:var(--gold);transform:translateY(-2px)}
-.idx svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6}
-.idx b{font-family:'Cairo';font-size:.8rem;color:var(--gold-soft);line-height:1.3}
-.idx small{display:none;color:var(--muted);font-size:.72rem}
-@media (min-width:900px){.index{padding-block:36px}.idx{grid-template-columns:repeat(8,1fr);gap:12px}.idx a{padding:16px 8px}.idx b{font-size:.92rem}.idx small{display:block}}
-.index .title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font-size:.9rem;color:var(--muted)}
-.index .title b{color:var(--gold-soft);font-family:'Cairo'}
+/* ===== شريط الأقسام اللاصق ===== */
+.bar{position:sticky;top:var(--top);z-index:60;background:rgba(11,31,58,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-navy)}
+.bar .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;height:var(--bar);align-items:stretch}
+.bar .wrap::-webkit-scrollbar{display:none}
+.bar a{flex:none;display:inline-flex;align-items:center;font-size:.86rem;font-weight:700;color:var(--on-navy-3);padding:0 12px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
+.bar a.on{color:var(--white);border-color:var(--gold)}
+@media (min-width:900px){.bar .wrap{justify-content:center;gap:14px}.bar a{font-size:.94rem;padding:0 14px}}
 
-/* ===== section footer link (الصفحة الرسمية) ===== */
-.more{display:flex;justify-content:center;margin-top:22px}
-.more a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:700;color:var(--gold-soft);font-size:.92rem;transition:.25s}
-.more a:hover{background:rgba(212,160,23,.12);border-color:var(--gold)}
-.more a small{color:var(--muted);font-weight:500}
+/* ===== لمن نقدّم الضيافة ===== */
+.who-grid{display:grid;gap:14px}
+.who{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;background:var(--navy)}
+.who img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.who:hover img{transform:scale(1.04)}
+.who::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,58,0) 30%,rgba(11,31,58,.55) 62%,rgba(11,31,58,.96) 100%)}
+.who div{position:absolute;inset-inline:18px;bottom:16px;z-index:1;color:var(--white)}
+.who b{display:block;font-family:var(--f-display);font-size:1.25rem;font-weight:600;margin-bottom:2px}
+.who small{display:block;font-size:.86rem;color:var(--on-navy-2);line-height:1.6}
+@media (min-width:900px){.who-grid{grid-template-columns:repeat(3,1fr);gap:20px}.who{aspect-ratio:4/5}.who b{font-size:1.4rem}}
 
-/* who */
-.who{background:var(--bg2)}
-.who-grid{display:grid;grid-template-columns:1fr;gap:12px}
-.who-card{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;border:1px solid var(--line);display:block}
-.who-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.who-card:hover img{transform:scale(1.04)}
-.who-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,8,3,.94))}
-.who-card div{position:absolute;bottom:0;inset-inline:0;padding:14px;z-index:2}
-.who-card .tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;color:var(--ink);background:var(--gold);border-radius:6px;padding:1px 8px;margin-bottom:6px;font-weight:800}
-.who-card b{display:block;font-family:'Cairo';font-size:1.15rem;color:var(--gold-soft)}
-.who-card small{display:block;color:var(--muted);font-size:.82rem;line-height:1.5}
-.who-card .go{position:absolute;top:12px;inset-inline-start:12px;z-index:2;background:rgba(10,8,3,.7);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:.75rem;color:var(--gold-soft)}
-@media(min-width:900px){.who-grid{grid-template-columns:repeat(3,1fr);gap:16px}.who-card{aspect-ratio:4/5}}
+/* ===== من وثق بنا ===== */
+.grp{margin-top:28px}
+.grp-title{scroll-margin-top:calc(var(--top) + var(--bar) + 12px);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.grp-title h3{font-size:1.12rem;font-weight:600;color:var(--ink)}
+.grp-title small{font-size:.82rem;color:var(--ink-3)}
+.grp-title::after{content:"";flex:1;height:1px;background:var(--line-paper)}
+.govs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.gov{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in;background:var(--navy)}
+.gov img{width:100%;height:100%;object-fit:cover}
+.gov figcaption{position:absolute;inset-inline:0;bottom:0;padding:34px 10px 8px;background:linear-gradient(180deg,rgba(11,31,58,0),rgba(11,31,58,.62) 40%,rgba(11,31,58,.97));color:var(--white);font-size:.78rem;line-height:1.4}
+.gov figcaption b{display:block;font-weight:700}
+.govs .gov:first-child{grid-column:1/-1;aspect-ratio:16/9}
+@media (min-width:900px){.govs{grid-template-columns:repeat(5,1fr);gap:14px}.govs .gov:first-child{grid-column:auto;aspect-ratio:4/3}.gov figcaption{font-size:.84rem;padding-inline:12px}}
+.logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.logo{position:relative;background:var(--white);border:1px solid var(--line-paper);border-radius:12px;aspect-ratio:3/2;min-width:0;overflow:hidden;padding:12px}
+.logo img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain}
+.logo.more{background:var(--navy);color:var(--white);border-color:var(--navy);text-align:center;display:grid;place-items:center}
+.logo.more b{font-family:var(--f-display);font-size:1.45rem;display:block;line-height:1;color:var(--gold-2)}
+.logo.more small{font-size:.74rem;color:var(--on-navy-2)}
+@media (min-width:900px){.logos{grid-template-columns:repeat(8,1fr);gap:14px}.logo{padding:18px}}
+.consent{margin-top:14px;font-size:.82rem;color:var(--ink-3);line-height:1.6}
 
-/* partners (light) */
-.partners{background:var(--cream);color:var(--ink)}
-.partners .eyebrow{color:var(--gold2)}
-.partners h2{color:var(--ink)}
-.partners .lead{color:#5a4d2c}
-.grp{margin-top:26px}
-.grp h3{font-size:1.05rem;color:var(--ink);display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.grp h3::after{content:"";flex:1;height:1px;background:rgba(0,0,0,.12)}
-.grp h3 span{background:var(--gold);color:var(--ink);font-size:.72rem;border-radius:6px;padding:1px 8px;letter-spacing:.1em}
-.govs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.gov{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:#000;border:1px solid rgba(0,0,0,.08)}
-.gov img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
-.gov figcaption{position:absolute;bottom:0;inset-inline:0;padding:10px;background:linear-gradient(180deg,transparent,rgba(10,8,3,.92));color:var(--text);font-size:.8rem;line-height:1.4}
-.gov figcaption b{display:block;color:var(--gold-soft);font-family:'Cairo';font-size:.9rem}
-@media(min-width:900px){.govs{grid-template-columns:repeat(5,1fr);gap:12px}}
-.logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.logo{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:12px;height:110px;display:grid;place-items:center;padding:10px;box-shadow:0 1px 4px rgba(0,0,0,.04);transition:box-shadow .25s}
-.logo:hover{box-shadow:0 8px 24px rgba(0,0,0,.08)}
-.logo img{max-height:100%;max-width:100%;object-fit:contain}
-@media(min-width:900px){.logo-grid{grid-template-columns:repeat(8,1fr);gap:12px}.logo{height:112px}}
-.partners .note{margin-top:14px;text-align:center;font-size:.8rem;color:#7a6a3e}
-.partners .more a{color:var(--gold2);border-color:rgba(184,134,11,.4)}
-.partners .more a small{color:#7a6a3e}
-
-/* works with tabs */
-.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
-.tabs button{border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-weight:700;font-size:.88rem;color:var(--muted);transition:.25s}
-.tabs button.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--pad) 14px;margin-inline:calc(-1 * var(--pad));scrollbar-width:none}
-.strip::-webkit-scrollbar{display:none}
-.shot{flex:0 0 78%;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:3/4;border:1px solid var(--line);background:#000}
+/* ===== أعمالنا ===== */
+.tabs{display:flex;gap:6px;justify-content:center;margin-bottom:22px;background:rgba(255,255,255,.06);border:1px solid var(--line-navy);padding:4px;border-radius:12px;width:max-content;max-width:100%;margin-inline:auto}
+.tabs button{padding:8px 14px;border-radius:9px;font-weight:700;font-size:.9rem;color:var(--on-navy-2);transition:.25s;white-space:nowrap}
+.tabs button.on{background:var(--gold);color:var(--navy)}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.shot{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/5;cursor:zoom-in;background:var(--navy-2)}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{position:absolute;inset-inline:0;bottom:0;padding:38px 10px 9px;background:linear-gradient(180deg,rgba(11,31,58,0),rgba(11,31,58,.62) 40%,rgba(11,31,58,.97));font-size:.8rem;line-height:1.45;color:var(--white)}
+.shot figcaption b{display:block;font-weight:700}
+.shot figcaption span{color:var(--on-navy-2)}
 .shot.off{display:none}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform .6s}
-.shot:hover img{transform:scale(1.03)}
-.shot .cat{position:absolute;top:10px;inset-inline-start:10px;font-size:.7rem;letter-spacing:.12em;font-weight:800;border-radius:6px;padding:2px 8px;background:var(--gold);color:var(--ink)}
-.shot .cat.c{background:#F3EEDC}
-.shot .cat.p{background:#E8C766}
-.shot figcaption{position:absolute;bottom:0;inset-inline:0;padding:12px;background:linear-gradient(180deg,transparent,rgba(10,8,3,.94));font-size:.86rem}
-.shot figcaption b{display:block;color:var(--gold-soft);font-family:'Cairo';font-size:.98rem}
-.shot figcaption span{color:var(--muted);font-size:.78rem}
-@media(min-width:900px){
-  #works .strip{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin-inline:0;padding:0;gap:16px}
-  .shot{flex:none}
-}
-.actions{display:grid;gap:10px;margin-top:8px}
-@media(min-width:900px){.actions{grid-template-columns:1fr 1fr;max-width:640px;margin-inline:auto}}
-.copy-ok{display:none;text-align:center;color:var(--wa);font-size:.85rem;margin-top:6px;grid-column:1/-1}
+@media (min-width:900px){.shots{grid-template-columns:repeat(4,1fr);gap:16px}.shot{aspect-ratio:4/5}.shot figcaption{font-size:.88rem;padding-inline:14px}}
+.works-foot{display:flex;justify-content:center;margin-top:26px}
 
-/* uniforms */
-.uni{flex:0 0 62%;scroll-snap-align:start;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);position:relative;aspect-ratio:3/4}
-.uni img{width:100%;height:100%;object-fit:cover;object-position:top}
-.uni b{position:absolute;bottom:10px;inset-inline:10px;background:rgba(10,8,3,.78);border:1px solid var(--line);color:var(--gold-soft);border-radius:10px;padding:6px 10px;font-family:'Cairo';font-size:.95rem;text-align:center}
-@media(min-width:900px){#staff .strip{display:grid;grid-template-columns:repeat(5,1fr);overflow:visible;margin-inline:0;padding:0;gap:16px}.uni{flex:none}}
+/* ===== الطاقم والزي ===== */
+.unis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.uni{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:3/4;cursor:zoom-in;background:var(--navy)}
+.uni img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.uni:hover img{transform:scale(1.04)}
+.uni b{position:absolute;inset-inline:0;bottom:0;padding:36px 12px 10px;background:linear-gradient(180deg,rgba(11,31,58,0),rgba(11,31,58,.6) 40%,rgba(11,31,58,.96));color:var(--white);font-family:var(--f-display);font-size:1rem;font-weight:600}
+.unis .uni:last-child{grid-column:1/-1;aspect-ratio:16/10}
+.unis .uni:last-child img{object-position:center}
+@media (min-width:900px){.unis{grid-template-columns:repeat(5,1fr);gap:16px}.unis .uni:last-child{grid-column:auto;aspect-ratio:3/4}}
+.hint{text-align:center;margin-top:14px;font-size:.84rem;color:var(--ink-3)}
 
-/* offerings */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tile{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card);position:relative;aspect-ratio:1}
-.tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.tile:hover img{transform:scale(1.04)}
-.tile span{position:absolute;bottom:0;inset-inline:0;padding:8px 10px;background:linear-gradient(180deg,transparent,rgba(10,8,3,.9));font-weight:700;font-size:.9rem;color:var(--gold-soft)}
-@media(min-width:900px){.grid2{grid-template-columns:repeat(4,1fr);gap:16px}}
+/* ===== التقديمات ===== */
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:1;cursor:zoom-in;background:var(--navy)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile span{position:absolute;inset-inline:0;bottom:0;padding:34px 12px 9px;background:linear-gradient(180deg,rgba(11,31,58,0),rgba(11,31,58,.6) 40%,rgba(11,31,58,.96));color:var(--white);font-size:.88rem;font-weight:700}
+@media (min-width:900px){.tiles{grid-template-columns:repeat(4,1fr);gap:16px}}
 
-/* services */
-.svc{display:grid;gap:10px}
-.svc a{display:grid;grid-template-columns:84px 1fr auto;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;backdrop-filter:blur(8px);transition:border-color .25s}
-.svc a:hover{border-color:var(--gold)}
-.svc img{width:84px;height:84px;border-radius:10px;object-fit:cover}
-.svc b{display:block;font-family:'Cairo';color:var(--gold-soft);font-size:1rem}
-.svc small{color:var(--muted);font-size:.8rem;line-height:1.5}
-.svc .chev{color:var(--gold);font-size:1.3rem;padding-inline:4px}
-@media(min-width:900px){.svc{grid-template-columns:repeat(3,1fr);gap:16px}}
+/* ===== الخدمات ===== */
+.svcs{display:grid;gap:10px}
+.svc{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:14px;background:var(--white);border:1px solid var(--line-paper);border-radius:12px;padding:10px;transition:border-color .25s,transform .25s}
+.svc:hover{border-color:var(--gold);transform:translateY(-2px)}
+.svc img{width:72px;height:72px;border-radius:9px;object-fit:cover}
+.svc b{display:block;font-family:var(--f-display);font-size:1.02rem;font-weight:600;color:var(--ink)}
+.svc small{display:block;color:var(--ink-3);font-size:.84rem}
+.svc .chev{display:grid;place-items:center;width:28px;height:28px;color:var(--gold);padding-inline-end:2px}
+.svc .chev svg{width:18px;height:18px;transform:scaleX(-1)}
+@media (min-width:900px){.svcs{grid-template-columns:repeat(3,1fr);gap:16px}.svc{padding:14px}}
 
-/* cities */
-.cities{background:var(--bg2);text-align:center}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
-.chips a{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--text);transition:.25s}
-.chips a:hover{border-color:var(--gold);color:var(--gold-soft)}
-.chips .main{background:var(--gold);color:var(--ink);font-weight:800;border-color:var(--gold)}
+/* ===== المدن ===== */
+.cities{padding-block:30px}
+.cities .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center}
+.cities .lbl{font-weight:700;color:var(--on-navy-2);font-size:.9rem;margin-inline-end:6px}
+.cities a{border:1px solid var(--line-navy);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:700;color:var(--white);transition:.25s}
+.cities a:hover{border-color:var(--gold);color:var(--gold-2)}
+.cities a.main{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 
-/* faq */
-.faqs{display:grid;gap:10px}
-@media(min-width:900px){.faqs{grid-template-columns:1fr 1fr;gap:14px;align-items:start}}
-details{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-summary{list-style:none;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer}
+/* ===== الأسئلة ===== */
+.faqs{display:grid;gap:8px}
+details{background:var(--white);border:1px solid var(--line-paper);border-radius:12px;padding:0 16px}
+summary{list-style:none;cursor:pointer;font-weight:700;padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--ink)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);font-size:1.4rem;line-height:1;flex:none}
-details[open] summary::after{content:"–"}
-details p{padding:0 16px 14px;color:var(--muted);font-size:.93rem}
+summary::after{content:"+";color:var(--gold);font-size:1.3rem;font-weight:400;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--ink-2);padding-bottom:14px;font-size:.95rem}
+@media (min-width:900px){.faqs{grid-template-columns:1fr 1fr;gap:14px}}
 
-/* cta */
-.cta{background:radial-gradient(120% 80% at 50% 0%,rgba(212,160,23,.18),transparent 60%),var(--bg2);text-align:center}
-.cta h2{margin-bottom:6px}
-.cta .btn{max-width:420px;margin-inline:auto}
-.cta .num{display:block;margin-top:14px;font-size:1.25rem;font-weight:800;color:var(--gold-soft);letter-spacing:.08em;direction:ltr}
-.cta .sub{color:var(--muted);font-size:.85rem}
+/* ===== تواصل ===== */
+.contact{text-align:center}
+.contact h2{font-size:clamp(1.6rem,6vw,2.5rem);color:var(--white);margin-bottom:10px}
+.contact p{color:var(--on-navy-2);max-width:46ch;margin:0 auto 24px}
+.contact .actions{display:grid;gap:10px;max-width:420px;margin-inline:auto}
+.contact .tel{margin-top:16px;font-size:.92rem;color:var(--on-navy-2)}
+.contact .assure{margin-top:18px;font-size:.88rem;color:var(--on-navy-2);display:inline-flex;align-items:center;gap:8px}
+.contact .assure::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.contact .tel a{color:var(--gold-2);font-weight:700;direction:ltr;unicode-bidi:embed}
+@media (min-width:900px){.contact .actions{grid-template-columns:1fr 1fr}}
 
-/* footer */
-footer{border-top:1px solid var(--line);padding:22px 0 90px;font-size:.82rem;color:var(--muted)}
-.badges{display:flex;justify-content:center;gap:10px;margin-bottom:14px}
-.badges span{background:#fff;border-radius:10px;padding:6px 10px;display:grid;place-items:center}
-.badges img{height:30px;width:auto}
-footer .links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:10px}
-footer .links a{color:var(--gold-soft)}
-footer p{text-align:center}
+/* ===== الفوتر ===== */
+footer{background:#081629;padding:34px 0 110px;color:var(--on-navy-3);font-size:.84rem}
+footer .brand-f{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+footer .brand-f img{height:40px}
+footer .brand-f b{font-family:var(--f-display);color:var(--white);font-size:1.05rem}
+footer .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+footer .badges span{background:var(--white);border-radius:8px;padding:6px 10px;height:40px;display:grid;place-items:center}
+footer .badges img{height:26px;width:auto}
+footer .links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:14px}
+footer .links a{color:var(--on-navy-2);font-weight:700}
+footer .links a:hover{color:var(--gold-2)}
+@media (min-width:900px){footer{padding-bottom:40px}}
 
-/* floating wa */
-.fab{position:fixed;bottom:18px;inset-inline-start:16px;z-index:55;background:var(--wa);color:#fff;border-radius:999px;padding:12px 16px;display:flex;align-items:center;gap:8px;font-weight:800;box-shadow:0 10px 30px rgba(37,211,102,.35);transition:opacity .3s}
-.fab svg{width:24px;height:24px;fill:#fff}
-.fab.hide{opacity:0;pointer-events:none}
+/* ===== زر واتساب العائم ===== */
+.fab{position:fixed;bottom:18px;inset-inline-end:18px;z-index:65;display:grid;place-items:center;width:54px;height:54px;background:var(--wa);color:#fff;border-radius:50%;box-shadow:0 10px 26px rgba(0,0,0,.35);transition:transform .3s,opacity .3s}
+.fab span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.fab svg{width:26px;height:26px;fill:#fff}
+.fab.hide{opacity:0;transform:translateY(20px);pointer-events:none}
+
+/* ===== المعرض (Lightbox) ===== */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,16,32,.96);display:none;flex-direction:column;color:var(--white)}
+.lb.open{display:flex}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:14px var(--pad);font-size:.9rem;color:var(--on-navy-2)}
+.lb-top button{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:1.4rem;color:var(--white)}
+.lb-stage{flex:1;display:grid;place-items:center;position:relative;padding:0 var(--pad);min-height:0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;user-select:none;-webkit-user-drag:none}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.10);color:var(--white);display:grid;place-items:center;font-size:1.6rem;backdrop-filter:blur(6px)}
+.lb-nav.prev{inset-inline-start:10px}.lb-nav.next{inset-inline-end:10px}
+.lb-cap{padding:12px var(--pad) 10px;text-align:center;min-height:56px}
+.lb-cap b{display:block;font-family:var(--f-display);font-size:1.08rem}
+.lb-cap span{color:var(--on-navy-2);font-size:.88rem}
+.lb-thumbs{display:flex;gap:6px;overflow-x:auto;padding:0 var(--pad) 18px;scrollbar-width:none}
+.lb-thumbs::-webkit-scrollbar{display:none}
+.lb-thumbs img{width:54px;height:54px;object-fit:cover;border-radius:8px;opacity:.5;border:2px solid transparent;flex:none;cursor:pointer;transition:.2s}
+.lb-thumbs img.on{opacity:1;border-color:var(--gold)}
+@media (min-width:900px){.lb-nav{width:56px;height:56px}.lb-nav.prev{inset-inline-start:40px}.lb-nav.next{inset-inline-end:40px}.lb-thumbs{justify-content:center}.lb-thumbs img{width:64px;height:64px}}
+body.lb-lock{overflow:hidden}
 </style>
 </head>
 <body>
 
-<div class="proto">نموذج تجريبي للمراجعة — ليس الموقع الفعلي · v2 · 2026-09-03</div>
+<div class="proto">نموذج تجريبي للمراجعة — ليس الموقع الفعلي · v3 · 2026-09-03</div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">
-      <img src="img/logo.png" alt="كيف الضيافة" width="40" height="40">
-      <span><b>كيف الضيافة</b><small>KEIF AL-DIAFA</small></span>
+    <a class="brand" href="#top" aria-label="كيف الضيافة — الرئيسية">
+      <img src="img/logo-emblem.png" alt="" width="37" height="44">
+      <span class="word"><b>كيف الضيافة</b><small>KEIF ALDIAFA</small></span>
     </a>
-    <div class="nav-right">
-      <a class="pill" href="#works">أعمالنا</a>
-      <a class="wa-ico" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" aria-label="واتساب" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.2 14 2.2 12.1 2.2 6.7 6.6 2.3 12 2.3c2.6 0 5.1 1 6.9 2.9 1.9 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.7-9.8 9.7M20.3 3.7C18.1 1.5 15.1.3 12 .3 5.5.3.3 5.5.3 12c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.6c1.7.9 3.6 1.4 5.5 1.4 6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4"/></svg>
+    <nav class="nav-right" aria-label="روابط سريعة">
+      <a class="nav-link" href="#works">أعمالنا</a>
+      <a class="nav-link" href="#staff">الطاقم والزي</a>
+      <a class="nav-link" href="#services">الخدمات</a>
+      <a class="btn btn-gold btn-sm" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.2 14 2.2 12.1 2.2 6.7 6.6 2.3 12 2.3c2.6 0 5.1 1 6.9 2.9 1.9 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.7-9.8 9.7M20.3 3.7C18.1 1.5 15.1.3 12 .3 5.5.3.3 5.5.3 12c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.6c1.7.9 3.6 1.4 5.5 1.4 6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4"/></svg>
+        واتساب
       </a>
-    </div>
+    </nav>
   </div>
 </header>
 
 <main id="top">
 
-<!-- 1) HERO: أرِني — فيديو (جوال) / صورة عرضية + بطاقة فيديو (ديسكتوب) -->
+<!-- 1) الهيرو -->
 <section class="hero" aria-label="الشاشة الرئيسية" style="padding-top:0">
   <div class="bg" aria-hidden="true">
-    <video class="mobile-only" autoplay muted loop playsinline preload="metadata" poster="img/photos/hero-poster.webp">
+    <video class="mobile-only" autoplay muted loop playsinline preload="auto" poster="img/photos/hero-poster.webp">
       <source src="video/hero-bg.mp4" type="video/mp4">
     </video>
     <picture>
@@ -278,88 +333,71 @@ footer p{text-align:center}
   </div>
   <div class="wrap">
     <div>
-      <p class="kicker">✦ جدة · منذ 2016 ✦</p>
-      <h1>ضيافة فاخرة للجهات الحكومية والمؤسسات، والشركات، والمناسبات</h1>
-      <p class="sub">قهوجيين وصبابين ومباشرين بزي موحد، ومعدات فاخرة — نصل إلى مناسبتك في كل مدن المملكة.</p>
-      <div class="proof"><span>+500 مناسبة</span><span>منذ 2016</span><span>جدة · مكة · المدينة · الرياض</span></div>
-      <div class="cta2">
-        <a class="btn btn-gold" href="#works">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 15 5-5 4 4 3-3 6 6"/></svg>
-          شاهد أعمالنا
-        </a>
-        <a class="btn btn-ghost" href="#index">ماذا يوجد في الصفحة؟ ↓</a>
+      <p class="kicker">جدة · منذ 2016</p>
+      <h1>ضيافة فاخرة <em>للجهات الحكومية</em> والشركات والمناسبات</h1>
+      <p class="sub">قهوجيين وصبابين بزي رسمي، دلال ذهبية وتقديمات مختارة — طاقم كامل يصل إلى مناسبتك في جدة وكل مدن المملكة.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#works">شاهد أعمالنا</a>
+        <a class="btn btn-glass" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" target="_blank" rel="noopener">تواصل عبر واتساب</a>
       </div>
-      <p class="hint">هذه الصفحة خلاصة — كل قسم يأخذك إلى صفحته الرسمية بالتفصيل.</p>
+      <div class="proof" aria-label="أرقامنا">
+        <span><b>+500</b>مناسبة نُفّذت</span><i></i>
+        <span><b>منذ 2016</b>خبرة متواصلة</span><i></i>
+        <span><b>جدة</b>ونخدم كل المملكة</span>
+      </div>
     </div>
     <div class="vcard" aria-hidden="true">
       <video autoplay muted loop playsinline preload="metadata" poster="img/photos/hero-poster.webp">
         <source src="video/hero-bg.mp4" type="video/mp4">
       </video>
-      <span>قهوة سعودية تُصبّ أمام ضيوفك</span>
     </div>
   </div>
 </section>
 
-<!-- 2) INDEX: الفهرس — «ابدأ من هنا» -->
-<div class="index" id="index">
+<!-- 2) شريط الأقسام -->
+<nav class="bar" id="bar" aria-label="أقسام الصفحة">
   <div class="wrap">
-    <div class="title"><b>الفهرس — ابدأ من هنا</b><span>٨ محطات · اضغط للانتقال</span></div>
-    <nav class="idx" aria-label="فهرس الصفحة">
-      <a href="#who"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><b>لمن نخدم؟</b><small>جهات · شركات · مناسبات</small></a>
-      <a href="#partners"><svg viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.2 9.4l6.1-.8z"/></svg><b>من وثق بنا</b><small>جهات وشركات</small></a>
-      <a href="#works"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 15 5-5 4 4 3-3 6 6"/></svg><b>أعمالنا</b><small>صور حقيقية</small></a>
-      <a href="#staff"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><b>الطاقم والزي</b><small>اختر الزي</small></a>
-      <a href="#offerings"><svg viewBox="0 0 24 24"><path d="M4 10h13a3 3 0 0 1 0 6H4zM17 12h2a2 2 0 0 1 0 4h-2M4 20h16"/></svg><b>التقديمات</b><small>قهوة · تمور · معدات</small></a>
-      <a href="#services"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><b>الخدمات</b><small>٦ خدمات</small></a>
-      <a href="#cities"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><b>المدن</b><small>جدة + المملكة</small></a>
-      <a href="#contact"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.2L4 21l1.8-5A8 8 0 1 1 21 12z"/></svg><b>تواصل</b><small>واتساب</small></a>
-    </nav>
-  </div>
-</div>
-
-<!-- sticky index bar -->
-<nav class="subnav" aria-label="التنقل السريع" id="subnav">
-  <div class="wrap">
-    <a href="#who">لمن نخدم</a><a href="#partners">من وثق بنا</a><a href="#works">أعمالنا</a><a href="#staff">الطاقم</a><a href="#offerings">التقديمات</a><a href="#services">الخدمات</a><a href="#cities">المدن</a><a href="#faq">أسئلة</a><a href="#contact">تواصل</a>
+    <a href="#who">لمن نخدم</a><a href="#trust">من وثق بنا</a><a href="#works">أعمالنا</a><a href="#staff">الطاقم والزي</a><a href="#offerings">التقديمات</a><a href="#services">الخدمات</a><a href="#faq">أسئلة</a><a href="#contact">تواصل</a>
   </div>
 </nav>
 
-<!-- 3) WHO: لمن نخدم؟ — ثلاث فئات بتصنيف العميل -->
-<section class="who" id="who">
+<!-- 3) لمن نقدّم الضيافة -->
+<section class="on-paper" id="who">
   <div class="wrap">
-    <p class="eyebrow rv">✦ لمن نخدم؟ ✦</p>
-    <h2 class="rv">ثلاث فئات، لكل فئة بروتوكولها</h2>
-    <p class="lead rv">اختر فئتك لترى أعمالنا معها مباشرة.</p>
-    <div class="who-grid">
-      <a class="who-card rv" href="#works" data-filter="g"><img src="img/photos/g-uqu1.webp" alt="طاقم كيف الضيافة في جناح جامعة بمعرض رسمي" loading="lazy"><span class="go">أعمالنا معهم ←</span><div><span class="tag">حكومي</span><b>الجهات الحكومية والمؤسسات</b><small>جامعات · أمانات · جهات مكة · الغرفة التجارية · مؤتمرات رسمية</small></div></a>
-      <a class="who-card rv" href="#works" data-filter="c"><img src="img/photos/c-flyadeal.webp" alt="قهوجي في فعالية شركة طيران" loading="lazy"><span class="go">أعمالنا معهم ←</span><div><span class="tag">شركات</span><b>الشركات</b><small>افتتاحات · معارض · مؤتمرات · فعاليات داخلية</small></div></a>
-      <a class="who-card rv" href="#works" data-filter="p"><img src="img/photos/p-wedding.webp" alt="طاقم ضيافة في قاعة زواج فاخرة" loading="lazy"><span class="go">أعمالنا معهم ←</span><div><span class="tag">مناسبات</span><b>المناسبات الخاصة والعامة</b><small>زواجات · مجالس · احتفالات · استقبال VIP</small></div></a>
+    <div class="sec-head">
+      <span class="label rv">لمن نخدم</span>
+      <h2 class="rv">نقدّم الضيافة للجهات الحكومية والشركات والمناسبات</h2>
+      <p class="rv">نفس الطاقم المدرّب والمعدات الفاخرة — ويتغيّر الزي والتقديم بحسب طابع مناسبتك.</p>
     </div>
-    <div class="more rv"><a href="https://keifaldiafa.com/about" target="_blank" rel="noopener">من نحن — الصفحة الرسمية <small>keifaldiafa.com/about</small> ←</a></div>
+    <div class="who-grid">
+      <figure class="who rv"><img src="img/photos/g-uqu1.webp" alt="طاقم كيف الضيافة في جناح جامعة بمعرض رسمي" loading="lazy"><div><b>الجهات الحكومية والمؤسسات</b><small>جامعات · أمانات · مؤتمرات ومعارض رسمية</small></div></figure>
+      <figure class="who rv"><img src="img/photos/c-flyadeal.webp" alt="قهوجي في فعالية شركة طيران" loading="lazy"><div><b>الشركات</b><small>افتتاحات · معارض · فعاليات داخلية · استقبال VIP</small></div></figure>
+      <figure class="who rv"><img src="img/photos/p-wedding.webp" alt="طاقم ضيافة في قاعة زواج" loading="lazy"><div><b>المناسبات الخاصة</b><small>زواجات · مجالس · احتفالات عائلية</small></div></figure>
+    </div>
   </div>
 </section>
 
-<!-- 4) PARTNERS: أقنعني — فئتان منفصلتان -->
-<section class="partners" id="partners">
+<!-- 4) من وثق بنا -->
+<section class="on-white" id="trust">
   <div class="wrap">
-    <p class="eyebrow rv">✦ من وثق بنا ✦</p>
-    <h2 class="rv">جهات حكومية ومؤسسات — وشركات</h2>
-    <p class="lead rv">فصلنا الفئتين بوضوح: الجهات الحكومية والمؤسسات بصور من الميدان، والشركات بشعاراتها.</p>
-
-    <div class="grp rv">
-      <h3><span>حكومي</span> جهات حكومية ومؤسسات خدمناها</h3>
-      <div class="govs">
-        <figure class="gov"><img src="img/photos/g-uqu1.webp" alt="ضيافة في جناح جامعة" loading="lazy"><figcaption><b>جامعة — معرض رسمي</b>مكة المكرمة</figcaption></figure>
-        <figure class="gov"><img src="img/photos/g-madinah.webp" alt="ضيافة احتفال رسمي لأمانة منطقة" loading="lazy"><figcaption><b>أمانة منطقة — احتفال رسمي</b>الغرفة التجارية بجدة</figcaption></figure>
-        <figure class="gov"><img src="img/photos/g-halal.webp" alt="ركن ضيافة في منتدى دولي بمكة" loading="lazy"><figcaption><b>منتدى دولي</b>مكة المكرمة</figcaption></figure>
-        <figure class="gov"><img src="img/photos/g-hajj.webp" alt="ضيافة مؤتمر ومعرض" loading="lazy"><figcaption><b>مؤتمر ومعرض رسمي</b>جدة</figcaption></figure>
-        <figure class="gov"><img src="img/photos/g-uqu2.webp" alt="ضيافة جناح جامعة في معرض" loading="lazy"><figcaption><b>جامعة — جناح معرض</b>جدة</figcaption></figure>
-      </div>
+    <div class="sec-head">
+      <span class="label rv">من وثق بنا</span>
+      <h2 class="rv">جهات حكومية وشركات اختارتنا لمناسباتها</h2>
     </div>
-
+    <div class="grp rv" style="margin-top:0">
+      <div class="grp-title"><h3>جهات حكومية ومؤسسات</h3><small>صور من الميدان</small></div>
+      <div class="govs">
+        <figure class="gov" data-g="gov"><img src="img/photos/g-madinah.webp" alt="ضيافة احتفال رسمي لأمانة منطقة" loading="lazy" data-cap="احتفال رسمي — أمانة منطقة" data-sub="الغرفة التجارية بجدة · بشت وقهوة سعودية"><figcaption><b>احتفال رسمي — أمانة منطقة</b>جدة</figcaption></figure>
+        <figure class="gov" data-g="gov"><img src="img/photos/g-uqu1.webp" alt="ضيافة في جناح جامعة" loading="lazy" data-cap="جناح جامعة — معرض رسمي" data-sub="مكة المكرمة"><figcaption><b>جامعة — معرض رسمي</b>مكة المكرمة</figcaption></figure>
+        <figure class="gov" data-g="gov"><img src="img/photos/g-halal.webp" alt="ركن ضيافة في منتدى دولي بمكة" loading="lazy" data-cap="ركن ضيافة — منتدى دولي" data-sub="مكة المكرمة · صالة VIP"><figcaption><b>منتدى دولي</b>مكة المكرمة</figcaption></figure>
+        <figure class="gov" data-g="gov"><img src="img/photos/g-hajj.webp" alt="ضيافة مؤتمر ومعرض رسمي" loading="lazy" data-cap="مؤتمر ومعرض رسمي" data-sub="جدة · ضيافة الزوار"><figcaption><b>مؤتمر ومعرض رسمي</b>جدة</figcaption></figure>
+        <figure class="gov" data-g="gov"><img src="img/photos/g-uqu2.webp" alt="ضيافة جناح جامعة في معرض" loading="lazy" data-cap="جناح جامعة — معرض" data-sub="جدة · قهوة وتمور"><figcaption><b>جامعة — جناح معرض</b>جدة</figcaption></figure>
+      </div>
+      <p class="consent">تُعرض أسماء وشعارات الجهات الحكومية بعد موافقتها الكتابية فقط.</p>
+    </div>
     <div class="grp rv">
-      <h3><span>شركات</span> شركات وثقت بنا</h3>
-      <div class="logo-grid">
+      <div class="grp-title"><h3>شركات</h3><small>بشعاراتها</small></div>
+      <div class="logos">
         <div class="logo"><img src="img/partners/01_Olayan_Group.webp" alt="مجموعة العليان" loading="lazy"></div>
         <div class="logo"><img src="img/partners/17_Saudi_Binladen_Group.webp" alt="مجموعة بن لادن السعودية" loading="lazy"></div>
         <div class="logo"><img src="img/partners/02_Schneider_Electric.webp" alt="Schneider Electric" loading="lazy"></div>
@@ -380,158 +418,149 @@ footer p{text-align:center}
         <div class="logo"><img src="img/partners/29_Bahja_Events.webp" alt="بهجة" loading="lazy"></div>
         <div class="logo"><img src="img/partners/14_Munera_Alessa.webp" alt="Munera Made" loading="lazy"></div>
         <div class="logo"><img src="img/partners/15_Somer.webp" alt="Somer" loading="lazy"></div>
-        <div class="logo"><img src="img/partners/18_Glamera.webp" alt="Gilera" loading="lazy"></div>
+        <div class="logo"><img src="img/partners/18_Glamera.webp" alt="Glamera" loading="lazy"></div>
         <div class="logo"><img src="img/partners/30_Hamat_Leading.webp" alt="هامات لأعمال الريادة" loading="lazy"></div>
         <div class="logo"><img src="img/partners/08_Benchmark.webp" alt="Benchmark" loading="lazy"></div>
-        <div class="logo" style="background:linear-gradient(135deg,#fff,#f3ecd2)"><span style="text-align:center;font-weight:800;color:var(--gold2);font-family:'Cairo';font-size:.95rem;line-height:1.4">+500<br><small style="font-family:'Tajawal';font-weight:500;color:#5a4d2c">مناسبة منذ 2016</small></span></div>
+        <div class="logo more"><div><b>+500</b><small>مناسبة منذ 2016</small></div></div>
       </div>
     </div>
-    <p class="note rv">أسماء وشعارات الجهات الحكومية تُعرض فقط بعد موافقة كتابية من كل جهة — لذلك نعرض صور الميدان بدون أسماء حتى تصل الموافقات.</p>
-    <div class="more rv"><a href="https://keifaldiafa.com/portfolio" target="_blank" rel="noopener">كل الأعمال والشركاء — الصفحة الرسمية <small>/portfolio</small> ←</a></div>
   </div>
 </section>
 
-<!-- 5) WORKS: أعمالنا مع تبويبات بالتصنيف الصحيح -->
-<section id="works">
+<!-- 5) أعمالنا -->
+<section class="on-navy grain" id="works">
   <div class="wrap">
-    <p class="eyebrow rv">✦ أعمالنا ✦</p>
-    <h2 class="rv">كيف ضيافتنا في الميدان</h2>
-    <p class="lead rv">كل صورة من مناسبة حقيقية نفّذناها — مصنّفة بحسب الفئة.</p>
-    <div class="tabs rv" role="tablist">
-      <button class="on" data-f="all" role="tab">الكل</button>
-      <button data-f="g" role="tab">جهات حكومية ومؤسسات</button>
-      <button data-f="c" role="tab">شركات</button>
-      <button data-f="p" role="tab">مناسبات</button>
+    <div class="sec-head">
+      <span class="label rv">أعمالنا</span>
+      <h2 class="rv">صور من مناسبات نفّذناها</h2>
+      <p class="rv">اضغط على أي صورة لتكبيرها والتنقّل بين الباقي.</p>
     </div>
-    <div class="strip" id="shots">
-      <figure class="shot rv" data-c="g"><img src="img/photos/g-madinah.webp" alt="احتفال رسمي لأمانة منطقة" loading="lazy"><span class="cat">حكومي</span><figcaption><b>احتفال رسمي — أمانة منطقة</b><span>الغرفة التجارية بجدة · بشت وقهوة سعودية</span></figcaption></figure>
-      <figure class="shot rv" data-c="c"><img src="img/photos/c-osus.webp" alt="استقبال VIP لشركة في قاعة رخامية" loading="lazy"><span class="cat c">شركات</span><figcaption><b>استقبال VIP — شركة مقاولات</b><span>جدة · قاعة رخامية</span></figcaption></figure>
-      <figure class="shot rv" data-c="g"><img src="img/photos/g-halal.webp" alt="ركن قهوة في منتدى دولي بمكة" loading="lazy"><span class="cat">حكومي</span><figcaption><b>ركن ضيافة — منتدى دولي</b><span>مكة المكرمة · صالة VIP</span></figcaption></figure>
-      <figure class="shot rv" data-c="p"><img src="img/photos/p-gala.webp" alt="عشاء رسمي فاخر" loading="lazy"><span class="cat p">مناسبات</span><figcaption><b>عشاء رسمي</b><span>بروتوكول ضيافة · قاعة فاخرة</span></figcaption></figure>
-      <figure class="shot rv" data-c="c"><img src="img/photos/c-millennium.webp" alt="ضيافة في جناح فندق بمعرض" loading="lazy"><span class="cat c">شركات</span><figcaption><b>جناح فندق — معرض</b><span>دلة ذهبية · زي موحد</span></figcaption></figure>
-      <figure class="shot rv" data-c="g"><img src="img/photos/g-uqu2.webp" alt="ضيافة جناح جامعة في معرض" loading="lazy"><span class="cat">حكومي</span><figcaption><b>جناح جامعة — معرض</b><span>جدة · قهوة وتمور</span></figcaption></figure>
-      <figure class="shot rv" data-c="p"><img src="img/photos/p-wedding.webp" alt="زواج فاخر" loading="lazy"><span class="cat p">مناسبات</span><figcaption><b>زواج فاخر</b><span>طاقم كامل بزي موحد</span></figcaption></figure>
-      <figure class="shot rv" data-c="c"><img src="img/photos/c-almana.webp" alt="ضيافة فعالية مجموعة طبية" loading="lazy"><span class="cat c">شركات</span><figcaption><b>فعالية مجموعة طبية</b><span>قهوة سعودية · استقبال</span></figcaption></figure>
-      <figure class="shot rv" data-c="g"><img src="img/photos/g-hajj.webp" alt="ضيافة مؤتمر ومعرض" loading="lazy"><span class="cat">حكومي</span><figcaption><b>مؤتمر ومعرض رسمي</b><span>جدة · ضيافة الزوار</span></figcaption></figure>
-      <figure class="shot rv" data-c="c"><img src="img/photos/c-bolt.webp" alt="ضيافة جناح شركة تقنية" loading="lazy"><span class="cat c">شركات</span><figcaption><b>جناح شركة تقنية</b><span>جدة · معرض</span></figcaption></figure>
-      <figure class="shot rv" data-c="p"><img src="img/photos/p-majlis.webp" alt="مجلس تراثي" loading="lazy"><span class="cat p">مناسبات</span><figcaption><b>مجلس بطابع تراثي</b><span>ديكور وضيافة متكاملة</span></figcaption></figure>
-      <figure class="shot rv" data-c="c"><img src="img/photos/c-anjum.webp" alt="ضيافة فندق في مكة" loading="lazy"><span class="cat c">شركات</span><figcaption><b>جناح فندق — مكة</b><span>استقبال رسمي</span></figcaption></figure>
+    <div class="tabs rv" role="tablist" aria-label="تصفية الأعمال">
+      <button class="on" data-f="all" role="tab" aria-selected="true">الكل</button>
+      <button data-f="g" role="tab" aria-selected="false">جهات حكومية</button>
+      <button data-f="c" role="tab" aria-selected="false">شركات</button>
+      <button data-f="p" role="tab" aria-selected="false">مناسبات</button>
     </div>
-    <div class="actions rv">
-      <a class="btn btn-ghost" href="https://keifaldiafa.com/portfolio" target="_blank" rel="noopener">معرض الأعمال الكامل — الصفحة الرسمية ←</a>
-      <button class="btn btn-ghost" id="copyBtn" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        انسخ رابط «أعمالنا» لإرساله للعميل
-      </button>
-      <p class="copy-ok" id="copyOk">✓ تم نسخ الرابط</p>
+    <div class="shots" id="shots">
+      <figure class="shot rv" data-c="g" data-g="works"><img src="img/photos/g-madinah.webp" alt="احتفال رسمي لأمانة منطقة" loading="lazy" data-cap="احتفال رسمي — أمانة منطقة" data-sub="الغرفة التجارية بجدة · بشت وقهوة سعودية"><figcaption><b>احتفال رسمي — أمانة منطقة</b><span>جدة · بشت وقهوة سعودية</span></figcaption></figure>
+      <figure class="shot rv" data-c="c" data-g="works"><img src="img/photos/c-osus.webp" alt="استقبال VIP لشركة" loading="lazy" data-cap="استقبال VIP — شركة مقاولات" data-sub="جدة · قاعة رخامية"><figcaption><b>استقبال VIP — شركة مقاولات</b><span>جدة</span></figcaption></figure>
+      <figure class="shot rv" data-c="g" data-g="works"><img src="img/photos/g-halal.webp" alt="ركن قهوة في منتدى دولي بمكة" loading="lazy" data-cap="ركن ضيافة — منتدى دولي" data-sub="مكة المكرمة · صالة VIP"><figcaption><b>ركن ضيافة — منتدى دولي</b><span>مكة المكرمة</span></figcaption></figure>
+      <figure class="shot rv" data-c="p" data-g="works"><img src="img/photos/p-gala.webp" alt="عشاء رسمي" loading="lazy" data-cap="عشاء رسمي" data-sub="قاعة فاخرة · بروتوكول ضيافة"><figcaption><b>عشاء رسمي</b><span>قاعة فاخرة</span></figcaption></figure>
+      <figure class="shot rv" data-c="c" data-g="works"><img src="img/photos/c-millennium.webp" alt="ضيافة في جناح فندق بمعرض" loading="lazy" data-cap="جناح فندق — معرض" data-sub="دلة ذهبية · زي موحد"><figcaption><b>جناح فندق — معرض</b><span>دلة ذهبية · زي موحد</span></figcaption></figure>
+      <figure class="shot rv" data-c="g" data-g="works"><img src="img/photos/g-uqu2.webp" alt="ضيافة جناح جامعة في معرض" loading="lazy" data-cap="جناح جامعة — معرض" data-sub="جدة · قهوة وتمور"><figcaption><b>جناح جامعة — معرض</b><span>جدة</span></figcaption></figure>
+      <figure class="shot rv" data-c="p" data-g="works"><img src="img/photos/p-wedding.webp" alt="زواج فاخر" loading="lazy" data-cap="زواج فاخر" data-sub="طاقم كامل بزي موحد"><figcaption><b>زواج فاخر</b><span>طاقم كامل بزي موحد</span></figcaption></figure>
+      <figure class="shot rv" data-c="c" data-g="works"><img src="img/photos/c-almana.webp" alt="ضيافة فعالية مجموعة طبية" loading="lazy" data-cap="فعالية مجموعة طبية" data-sub="قهوة سعودية · استقبال"><figcaption><b>فعالية مجموعة طبية</b><span>استقبال</span></figcaption></figure>
+      <figure class="shot rv" data-c="g" data-g="works"><img src="img/photos/g-hajj.webp" alt="ضيافة مؤتمر ومعرض" loading="lazy" data-cap="مؤتمر ومعرض رسمي" data-sub="جدة · ضيافة الزوار"><figcaption><b>مؤتمر ومعرض رسمي</b><span>جدة</span></figcaption></figure>
+      <figure class="shot rv" data-c="c" data-g="works"><img src="img/photos/c-bolt.webp" alt="ضيافة جناح شركة تقنية" loading="lazy" data-cap="جناح شركة تقنية" data-sub="جدة · معرض"><figcaption><b>جناح شركة تقنية</b><span>جدة · معرض</span></figcaption></figure>
+      <figure class="shot rv" data-c="p" data-g="works"><img src="img/photos/p-majlis.webp" alt="مجلس تراثي" loading="lazy" data-cap="مجلس بطابع تراثي" data-sub="ديكور وضيافة متكاملة"><figcaption><b>مجلس بطابع تراثي</b><span>ديكور وضيافة</span></figcaption></figure>
+      <figure class="shot rv" data-c="c" data-g="works"><img src="img/photos/c-anjum.webp" alt="ضيافة فندق في مكة" loading="lazy" data-cap="جناح فندق — مكة" data-sub="استقبال رسمي"><figcaption><b>جناح فندق — مكة</b><span>استقبال رسمي</span></figcaption></figure>
     </div>
+    <div class="works-foot rv"><a class="btn btn-glass" href="https://keifaldiafa.com/portfolio">معرض الأعمال الكامل</a></div>
   </div>
 </section>
 
-<!-- 6) STAFF / UNIFORMS -->
-<section class="who" id="staff">
+<!-- 6) الطاقم والزي -->
+<section class="on-paper" id="staff">
   <div class="wrap">
-    <p class="eyebrow rv">✦ الطاقم والزي ✦</p>
-    <h2 class="rv">اختر زيّ طاقمك</h2>
-    <p class="lead rv">قهوجيين وصبابين ومباشرين — وطاقم نسائي للمناسبات النسائية.</p>
-    <div class="strip">
-      <figure class="uni rv"><img src="img/photos/u-hizam.webp" alt="زي حزام" loading="lazy"><b>حزام</b></figure>
-      <figure class="uni rv"><img src="img/photos/u-dagla.webp" alt="زي دقلة" loading="lazy"><b>دقلة</b></figure>
-      <figure class="uni rv"><img src="img/photos/u-sideriya.webp" alt="زي سديرية" loading="lazy"><b>سديرية</b></figure>
-      <figure class="uni rv"><img src="img/photos/u-makkawi.webp" alt="زي مكاوي" loading="lazy"><b>مكاوي</b></figure>
-      <figure class="uni rv"><img src="img/photos/u-female.webp" alt="صبابات ومباشرات" loading="lazy"><b>صبابات ومباشرات</b></figure>
+    <div class="sec-head">
+      <span class="label rv">الطاقم والزي</span>
+      <h2 class="rv">اختر زيّ طاقمك</h2>
+      <p class="rv">قهوجيين وصبابين ومباشرين بزي موحد — وطاقم نسائي للمناسبات النسائية.</p>
     </div>
-    <div class="more rv"><a href="https://keifaldiafa.com/services" target="_blank" rel="noopener">تفاصيل الطاقم والزي — الصفحة الرسمية <small>/services</small> ←</a></div>
-  </div>
-</section>
-
-<!-- 7) OFFERINGS & EQUIPMENT -->
-<section id="offerings">
-  <div class="wrap">
-    <p class="eyebrow rv">✦ التقديمات والمعدات ✦</p>
-    <h2 class="rv">ما الذي يصل إلى ضيوفك؟</h2>
-    <div class="gold-line"></div>
-    <div class="grid2">
-      <div class="tile rv"><img src="img/photos/o-dallah.webp" alt="دلال ذهبية" loading="lazy"><span>دلال ذهبية وفضية</span></div>
-      <div class="tile rv"><img src="img/photos/o-cups.webp" alt="فناجين وكاسات فاخرة" loading="lazy"><span>فناجين وكاسات فاخرة</span></div>
-      <div class="tile rv"><img src="img/photos/o-dates.webp" alt="تمور محشية" loading="lazy"><span>تمور فاخرة</span></div>
-      <div class="tile rv"><img src="img/photos/o-sweets.webp" alt="حلويات" loading="lazy"><span>حلويات ومعجنات</span></div>
-      <div class="tile rv"><img src="img/photos/o-tea.webp" alt="مشروبات حارة" loading="lazy"><span>قهوة · شاي · مشروبات</span></div>
-      <div class="tile rv"><img src="img/photos/o-tray.webp" alt="توزيعات" loading="lazy"><span>توزيعات VIP</span></div>
-      <div class="tile rv"><img src="img/photos/o-buffet.webp" alt="بوفيه ضيافة" loading="lazy"><span>بوفيه ضيافة</span></div>
-      <div class="tile rv"><img src="img/photos/o-counter.webp" alt="كاونتر قهوة" loading="lazy"><span>كاونتر قهوة ذهبي</span></div>
-    </div>
-    <div class="more rv"><a href="https://keifaldiafa.com/offerings" target="_blank" rel="noopener">كل التقديمات — الصفحة الرسمية <small>/offerings</small> ←</a></div>
-  </div>
-</section>
-
-<!-- 8) SERVICES -->
-<section class="who" id="services">
-  <div class="wrap">
-    <p class="eyebrow rv">✦ خدماتنا ✦</p>
-    <h2 class="rv">ست خدمات، طاقم واحد</h2>
-    <div class="gold-line"></div>
-    <div class="svc">
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-hosts.webp" alt="" loading="lazy"><div><b>قهوجيين وصبابين ومباشرين</b><small>زي موحد · بروتوكول VIP</small></div><span class="chev">‹</span></a>
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-female.webp" alt="" loading="lazy"><div><b>صبابات ومباشرات</b><small>طاقم نسائي للمناسبات النسائية</small></div><span class="chev">‹</span></a>
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-zamzam.webp" alt="" loading="lazy"><div><b>سقّاء زمزم</b><small>تقديم تراثي فاخر</small></div><span class="chev">‹</span></a>
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-sawas.webp" alt="" loading="lazy"><div><b>سوّاس</b><small>ضيافة استعراضية بزي فلكلوري</small></div><span class="chev">‹</span></a>
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-tent.webp" alt="" loading="lazy"><div><b>خيمة تراثية وكاونتر قهوة</b><small>تجهيز مكان الضيافة كاملًا</small></div><span class="chev">‹</span></a>
-      <a class="rv" href="https://keifaldiafa.com/services" target="_blank" rel="noopener"><img src="img/photos/s-folk.webp" alt="" loading="lazy"><div><b>فرقة شعبية وخدمات فنية</b><small>خطاط · رسّام · فرقة</small></div><span class="chev">‹</span></a>
-    </div>
-    <div class="more rv"><a href="https://keifaldiafa.com/services" target="_blank" rel="noopener">كل الخدمات بالتفصيل — الصفحة الرسمية <small>/services</small> ←</a></div>
-  </div>
-</section>
-
-<!-- 9) CITIES -->
-<section class="cities" id="cities">
-  <div class="wrap">
-    <p class="eyebrow rv">✦ أين نعمل؟ ✦</p>
-    <h2 class="rv">مقرّنا جدة — ونصل إلى كل المملكة</h2>
-    <p class="lead rv">اضغط على مدينتك لصفحتها الرسمية.</p>
-    <div class="chips rv">
-      <a class="main" href="https://keifaldiafa.com/locations/جدة" target="_blank" rel="noopener">جدة</a>
-      <a href="https://keifaldiafa.com/locations/مكة-المكرمة" target="_blank" rel="noopener">مكة المكرمة</a>
-      <a href="https://keifaldiafa.com/locations/المدينة-المنورة" target="_blank" rel="noopener">المدينة المنورة</a>
-      <a href="https://keifaldiafa.com/locations/الرياض" target="_blank" rel="noopener">الرياض</a>
-      <a href="https://keifaldiafa.com/locations/الطائف" target="_blank" rel="noopener">الطائف</a>
-      <a href="https://keifaldiafa.com/locations/الدمام" target="_blank" rel="noopener">الدمام</a>
-      <a href="https://keifaldiafa.com/locations/أبها" target="_blank" rel="noopener">أبها</a>
-      <a href="https://keifaldiafa.com/locations/ينبع" target="_blank" rel="noopener">ينبع</a>
+    <div class="unis">
+      <figure class="uni rv" data-g="uni"><img src="img/photos/u-hizam.webp" alt="زي حزام" loading="lazy" data-cap="حزام" data-sub="الزي الأكثر طلبًا للمناسبات الرسمية"><b>حزام</b></figure>
+      <figure class="uni rv" data-g="uni"><img src="img/photos/u-dagla.webp" alt="زي دقلة" loading="lazy" data-cap="دقلة" data-sub="طابع حجازي تراثي"><b>دقلة</b></figure>
+      <figure class="uni rv" data-g="uni"><img src="img/photos/u-sideriya.webp" alt="زي سديرية" loading="lazy" data-cap="سديرية" data-sub="أنيق وعملي للفعاليات الطويلة"><b>سديرية</b></figure>
+      <figure class="uni rv" data-g="uni"><img src="img/photos/u-makkawi.webp" alt="زي مكاوي" loading="lazy" data-cap="مكاوي" data-sub="للمناسبات ذات الطابع المكّي"><b>مكاوي</b></figure>
+      <figure class="uni rv" data-g="uni"><img src="img/photos/u-female.webp" alt="صبابات ومباشرات" loading="lazy" data-cap="صبابات ومباشرات" data-sub="طاقم نسائي للمناسبات النسائية"><b>صبابات ومباشرات</b></figure>
     </div>
   </div>
 </section>
 
-<!-- 10) FAQ -->
-<section id="faq">
+<!-- 7) التقديمات -->
+<section class="on-white" id="offerings">
   <div class="wrap">
-    <p class="eyebrow rv">✦ أسئلة الجهات والشركات ✦</p>
-    <h2 class="rv">قبل أن تتواصل</h2>
-    <div class="gold-line"></div>
+    <div class="sec-head">
+      <span class="label rv">التقديمات والمعدات</span>
+      <h2 class="rv">ما الذي يصل إلى ضيوفك؟</h2>
+    </div>
+    <div class="tiles">
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-dallah.webp" alt="دلال ذهبية" loading="lazy" data-cap="دلال ذهبية وفضية"><span>دلال ذهبية وفضية</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-cups.webp" alt="فناجين وكاسات" loading="lazy" data-cap="فناجين وكاسات فاخرة"><span>فناجين وكاسات فاخرة</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-dates.webp" alt="تمور فاخرة" loading="lazy" data-cap="تمور فاخرة"><span>تمور فاخرة</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-sweets.webp" alt="حلويات ومعجنات" loading="lazy" data-cap="حلويات ومعجنات"><span>حلويات ومعجنات</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-tea.webp" alt="قهوة وشاي ومشروبات" loading="lazy" data-cap="قهوة · شاي · مشروبات"><span>قهوة · شاي · مشروبات</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-tray.webp" alt="توزيعات VIP" loading="lazy" data-cap="توزيعات VIP"><span>توزيعات VIP</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-buffet.webp" alt="بوفيه ضيافة" loading="lazy" data-cap="بوفيه ضيافة"><span>بوفيه ضيافة</span></figure>
+      <figure class="tile rv" data-g="off"><img src="img/photos/o-counter.webp" alt="كاونتر قهوة" loading="lazy" data-cap="كاونتر قهوة ذهبي"><span>كاونتر قهوة ذهبي</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8) الخدمات -->
+<section class="on-paper" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label rv">الخدمات</span>
+      <h2 class="rv">ست خدمات بطاقم واحد</h2>
+    </div>
+    <div class="svcs">
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-hosts.webp" alt="" loading="lazy"><div><b>قهوجيين وصبابين ومباشرين</b><small>زي موحد · بروتوكول VIP</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-female.webp" alt="" loading="lazy"><div><b>صبابات ومباشرات</b><small>طاقم نسائي للمناسبات النسائية</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-zamzam.webp" alt="" loading="lazy"><div><b>سقّاء زمزم</b><small>تقديم تراثي</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-sawas.webp" alt="" loading="lazy"><div><b>سوّاس</b><small>ضيافة استعراضية بزي فلكلوري</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-tent.webp" alt="" loading="lazy"><div><b>خيمة تراثية وكاونتر قهوة</b><small>تجهيز مكان الضيافة كاملًا</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+      <a class="svc rv" href="https://keifaldiafa.com/services"><img src="img/photos/s-folk.webp" alt="" loading="lazy"><div><b>فرقة شعبية وخدمات فنية</b><small>خطاط · رسّام · فرقة</small></div><span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9) المدن (سطر واحد بلا عنوان) -->
+<section class="cities on-navy-2" aria-label="المدن التي نخدمها">
+  <div class="wrap rv">
+    <span class="lbl">نخدم في:</span>
+    <a class="main" href="https://keifaldiafa.com/locations/جدة">جدة</a>
+    <a href="https://keifaldiafa.com/locations/مكة-المكرمة">مكة المكرمة</a>
+    <a href="https://keifaldiafa.com/locations/المدينة-المنورة">المدينة المنورة</a>
+    <a href="https://keifaldiafa.com/locations/الرياض">الرياض</a>
+    <a href="https://keifaldiafa.com/locations/الطائف">الطائف</a>
+    <a href="https://keifaldiafa.com/locations/الدمام">الدمام</a>
+    <a href="https://keifaldiafa.com/locations/أبها">أبها</a>
+    <a href="https://keifaldiafa.com/locations/ينبع">ينبع</a>
+  </div>
+</section>
+
+<!-- 10) أسئلة -->
+<section class="on-paper" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label rv">أسئلة شائعة</span>
+      <h2 class="rv">ما يسأله عنه مسؤولو المشتريات والفعاليات</h2>
+    </div>
     <div class="faqs">
-      <details class="rv" open><summary>هل تتعاملون مع الجهات الحكومية والشركات بعقود وفواتير رسمية؟</summary><p>نعم — نعمل مع الجهات الحكومية والمؤسسات والشركات بعروض أسعار رسمية وعقود وفواتير، ونلتزم بمتطلبات المشتريات والبروتوكول الخاصة بكل جهة.</p></details>
-      <details class="rv"><summary>كم يحتاج الحجز من وقت قبل المناسبة؟</summary><p>يفضّل التواصل مبكرًا قدر الإمكان، خاصة للمناسبات الكبيرة أو خارج جدة، لنضمن توفر الطاقم والزي والمعدات المطلوبة. للطلبات العاجلة تواصل معنا مباشرة على واتساب.</p></details>
-      <details class="rv"><summary>هل الطاقم بزي موحد؟ وهل يمكن اختيار الزي؟</summary><p>نعم، جميع الطاقم بزي موحد فاخر، ويمكنك اختيار الزي (حزام، دقلة، سديرية، مكاوي) بما يناسب طابع المناسبة، مع طاقم نسائي للمناسبات النسائية.</p></details>
-      <details class="rv"><summary>هل تشمل الخدمة المعدات والتقديمات؟</summary><p>نعم، نوفر الدلال والفناجين والكاونترات والتقديمات (قهوة سعودية، شاي، تمور، حلويات، توزيعات) كحزمة متكاملة أو حسب طلبك.</p></details>
-      <details class="rv"><summary>هل تغطون مدنًا خارج جدة؟</summary><p>نعم، نغطي مكة والمدينة والرياض والطائف والدمام وأبها وينبع وباقي مدن المملكة.</p></details>
-      <details class="rv"><summary>كيف أرى أعمالكم مع جهة مشابهة لجهتي؟</summary><p>في قسم «أعمالنا» أعلى الصفحة اختر التبويب (جهات حكومية ومؤسسات / شركات / مناسبات)، أو راسلنا على واتساب ونرسل لك نماذج مشابهة لمناسبتك.</p></details>
+      <details class="rv" open><summary>هل تعملون بعروض أسعار وعقود وفواتير رسمية؟</summary><p>نعم. نعمل مع الجهات الحكومية والمؤسسات والشركات بعروض أسعار رسمية وعقود وفواتير، ونلتزم بمتطلبات المشتريات والبروتوكول لكل جهة.</p></details>
+      <details class="rv"><summary>كم أحتاج من وقت للحجز قبل المناسبة؟</summary><p>كلما بكّرت كان أفضل، خاصة للمناسبات الكبيرة أو خارج جدة، لنضمن توفر الطاقم والزي والمعدات. للطلبات العاجلة تواصل معنا مباشرة على واتساب.</p></details>
+      <details class="rv"><summary>هل أختار زيّ الطاقم؟</summary><p>نعم. حزام، دقلة، سديرية أو مكاوي بحسب طابع المناسبة، مع طاقم نسائي للمناسبات النسائية.</p></details>
+      <details class="rv"><summary>هل الخدمة تشمل المعدات والتقديمات؟</summary><p>نعم. الدلال والفناجين والكاونترات والتقديمات (قهوة سعودية، شاي، تمور، حلويات، توزيعات) كحزمة متكاملة أو بحسب طلبك.</p></details>
     </div>
   </div>
 </section>
 
-<!-- 11) CTA: كلّمني -->
-<section class="cta" id="contact">
+<!-- 11) تواصل -->
+<section class="on-navy grain contact" id="contact">
   <div class="wrap">
-    <p class="eyebrow rv">✦ تواصل ✦</p>
-    <h2 class="rv">أرسل لنا تفاصيل مناسبتك</h2>
-    <p class="lead rv">المدينة · التاريخ · عدد الضيوف — ونرد عليك بعرض مناسب.</p>
-    <a class="btn btn-wa rv" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9%3A%0A%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%3A%20%0A%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%3A%20%0A%D8%B9%D8%AF%D8%AF%20%D8%A7%D9%84%D8%B6%D9%8A%D9%88%D9%81%3A%20" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.2 14 2.2 12.1 2.2 6.7 6.6 2.3 12 2.3c2.6 0 5.1 1 6.9 2.9 1.9 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.7-9.8 9.7M20.3 3.7C18.1 1.5 15.1.3 12 .3 5.5.3.3 5.5.3 12c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.6c1.7.9 3.6 1.4 5.5 1.4 6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4"/></svg>
-      تواصل عبر واتساب
-    </a>
-    <span class="num">0508252134</span>
-    <span class="sub">الرسالة مُعدّة مسبقًا — أكمل التفاصيل وأرسل.</span>
-    <div class="more rv"><a href="https://keifaldiafa.com/contact" target="_blank" rel="noopener">صفحة التواصل الرسمية <small>/contact</small> ←</a></div>
+    <span class="label rv" style="display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.12em;color:var(--gold);margin-bottom:10px">تواصل</span>
+    <h2 class="rv">أرسل تفاصيل مناسبتك ونعود إليك بعرض</h2>
+    <p class="rv">المدينة · التاريخ · عدد الضيوف — والرسالة مُعدّة مسبقًا في واتساب.</p>
+    <div class="actions rv">
+      <a class="btn btn-wa" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9%3A%0A%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9%3A%20%0A%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%3A%20%0A%D8%B9%D8%AF%D8%AF%20%D8%A7%D9%84%D8%B6%D9%8A%D9%88%D9%81%3A%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.2 14 2.2 12.1 2.2 6.7 6.6 2.3 12 2.3c2.6 0 5.1 1 6.9 2.9 1.9 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.7-9.8 9.7M20.3 3.7C18.1 1.5 15.1.3 12 .3 5.5.3.3 5.5.3 12c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.6c1.7.9 3.6 1.4 5.5 1.4 6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4"/></svg>
+        تواصل عبر واتساب
+      </a>
+      <a class="btn btn-glass" href="tel:+966508252134">اتصال مباشر</a>
+    </div>
+    <p class="tel rv">واتساب واتصال: <a href="tel:+966508252134">0508252134</a></p>
+    <p class="assure rv">عروض أسعار وعقود وفواتير رسمية للجهات والشركات</p>
   </div>
 </section>
 
@@ -539,18 +568,19 @@ footer p{text-align:center}
 
 <footer>
   <div class="wrap">
-    <div class="badges">
+    <div class="brand-f"><img src="img/logo-emblem.png" alt=""><b>كيف الضيافة</b></div>
+    <div class="badges" aria-label="التسجيلات الرسمية">
       <span><img src="img/commerce.svg" alt="وزارة التجارة" loading="lazy"></span>
       <span><img src="img/sbc.svg" alt="المركز السعودي للأعمال" loading="lazy"></span>
       <span><img src="img/zatca.svg" alt="هيئة الزكاة والضريبة والجمارك" loading="lazy"></span>
     </div>
     <div class="links">
-      <a href="https://keifaldiafa.com/services" target="_blank" rel="noopener">خدماتنا</a>
-      <a href="https://keifaldiafa.com/offerings" target="_blank" rel="noopener">تقديماتنا</a>
-      <a href="https://keifaldiafa.com/portfolio" target="_blank" rel="noopener">أعمالنا</a>
-      <a href="https://keifaldiafa.com/locations" target="_blank" rel="noopener">المدن</a>
-      <a href="https://keifaldiafa.com/about" target="_blank" rel="noopener">من نحن</a>
-      <a href="https://keifaldiafa.com/contact" target="_blank" rel="noopener">تواصل معنا</a>
+      <a href="https://keifaldiafa.com/services">خدماتنا</a>
+      <a href="https://keifaldiafa.com/offerings">تقديماتنا</a>
+      <a href="https://keifaldiafa.com/portfolio">أعمالنا</a>
+      <a href="https://keifaldiafa.com/locations">المدن</a>
+      <a href="https://keifaldiafa.com/about">من نحن</a>
+      <a href="https://keifaldiafa.com/contact">تواصل معنا</a>
     </div>
     <p>© كيف الضيافة — جدة، المملكة العربية السعودية · keifaldiafa.com</p>
   </div>
@@ -558,55 +588,92 @@ footer p{text-align:center}
 
 <a class="fab" id="fab" href="https://wa.me/966508252134?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D9%83%D9%8A%D9%81%20%D8%A7%D9%84%D8%B6%D9%8A%D8%A7%D9%81%D8%A9%20%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A9" target="_blank" rel="noopener" aria-label="تواصل واتساب">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.7 2.2 14 2.2 12.1 2.2 6.7 6.6 2.3 12 2.3c2.6 0 5.1 1 6.9 2.9 1.9 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.7-9.8 9.7M20.3 3.7C18.1 1.5 15.1.3 12 .3 5.5.3.3 5.5.3 12c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.6c1.7.9 3.6 1.4 5.5 1.4 6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4"/></svg>
-  واتساب
+  <span>واتساب</span>
 </a>
+
+<!-- المعرض -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصورة">
+  <div class="lb-top"><span id="lbCount"></span><button id="lbClose" aria-label="إغلاق">×</button></div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="">
+    <button class="lb-nav prev" id="lbPrev" aria-label="السابق">›</button>
+    <button class="lb-nav next" id="lbNext" aria-label="التالي">‹</button>
+  </div>
+  <div class="lb-cap"><b id="lbCap"></b><span id="lbSub"></span></div>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</div>
 
 <script>
 (function(){
   const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // 1) reveal on scroll
+  // 1) الظهور عند التمرير
   const rvs=$$('.rv');
   if(reduce||!('IntersectionObserver' in window)){rvs.forEach(e=>e.classList.add('in'));}
   else{
-    const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}}),{rootMargin:'0px 0px 120px 0px',threshold:.05});
-    rvs.forEach((e,i)=>{e.style.transitionDelay=((i%4)*60)+'ms';ro.observe(e);});
+    const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}}),{rootMargin:'0px 0px 140px 0px',threshold:.04});
+    rvs.forEach((e,i)=>{e.style.transitionDelay=((i%4)*50)+'ms';ro.observe(e);});
   }
-  // 2) videos: pause when reduced motion; only play the visible one
   $$('video').forEach(v=>{ if(reduce){v.removeAttribute('autoplay');v.pause();} });
 
-  // 3) works tabs (filter)
+  // 2) تبويبات الأعمال (تصفية فقط — بلا قفزات)
   const tabs=$$('.tabs button'), shots=$$('#shots .shot');
-  function filter(f){
-    tabs.forEach(b=>b.classList.toggle('on',b.dataset.f===f));
-    shots.forEach(s=>s.classList.toggle('off',f!=='all'&&s.dataset.c!==f));
-    shots.forEach(s=>s.classList.add('in'));
-    const st=$('#shots'); if(st.scrollTo) st.scrollTo({left:0});
-  }
-  tabs.forEach(b=>b.addEventListener('click',()=>filter(b.dataset.f)));
-  // who-cards → jump to works with the right tab
-  $$('.who-card[data-filter]').forEach(a=>a.addEventListener('click',()=>filter(a.dataset.filter)));
+  tabs.forEach(b=>b.addEventListener('click',()=>{
+    const f=b.dataset.f;
+    tabs.forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-selected',on);});
+    shots.forEach(s=>{s.classList.toggle('off',f!=='all'&&s.dataset.c!==f);s.classList.add('in');});
+  }));
 
-  // 4) scrollspy for sticky index bar
-  const links=$$('#subnav a'); const ids=links.map(a=>a.getAttribute('href').slice(1));
-  const secs=ids.map(id=>document.getElementById(id)).filter(Boolean);
-  const so=new IntersectionObserver(es=>{
-    es.forEach(e=>{ if(e.isIntersecting){ links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
-      const on=$('#subnav a.on'), bar=$('#subnav .wrap'); if(on&&bar&&bar.scrollWidth>bar.clientWidth){ const left=on.offsetLeft-(bar.clientWidth-on.offsetWidth)/2; bar.scrollTo({left,behavior:reduce?'auto':'smooth'}); } } });
-  },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+  // 3) شريط الأقسام — تظليل القسم الحالي
+  const links=$$('#bar a'); const secs=links.map(a=>document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+  const so=new IntersectionObserver(es=>{es.forEach(e=>{ if(e.isIntersecting){
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+    const on=$('#bar a.on'), bar=$('#bar .wrap');
+    if(on&&bar&&bar.scrollWidth>bar.clientWidth){ const left=on.offsetLeft-(bar.clientWidth-on.offsetWidth)/2; bar.scrollTo({left,behavior:reduce?'auto':'smooth'}); }
+  }});},{rootMargin:'-40% 0px -55% 0px',threshold:0});
   secs.forEach(s=>so.observe(s));
 
-  // 5) copy shareable works link
-  $('#copyBtn').addEventListener('click',async()=>{
-    const url=location.origin+location.pathname+'#works';
-    try{await navigator.clipboard.writeText(url);}catch(e){const t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove();}
-    const ok=$('#copyOk');ok.style.display='block';setTimeout(()=>ok.style.display='none',2500);
-  });
+  // 4) زر واتساب العائم: مخفي في الهيرو (فيه زر واتساب أصلاً) وفي قسم التواصل — يظهر في المنتصف فقط
+  const fab=$('#fab'), contact=$('#contact'), hero=$('.hero');
+  if(fab){
+    const vis={hero:true,contact:false};
+    const apply=()=>fab.classList.toggle('hide',vis.hero||vis.contact);
+    if(hero) new IntersectionObserver(es=>es.forEach(e=>{vis.hero=e.isIntersecting;apply();}),{threshold:.15}).observe(hero);
+    if(contact) new IntersectionObserver(es=>es.forEach(e=>{vis.contact=e.isIntersecting;apply();}),{threshold:.2}).observe(contact);
+    apply();
+  }
 
-  // 6) hide floating WA on CTA section
-  const fab=$('#fab');
-  new IntersectionObserver(es=>es.forEach(e=>fab.classList.toggle('hide',e.isIntersecting)),{threshold:.3}).observe($('#contact'));
+  // 5) المعرض: سلوك واحد — الضغط على صورة يفتحها ويعرض باقي المجموعة
+  const lb=$('#lb'), lbImg=$('#lbImg'), lbCap=$('#lbCap'), lbSub=$('#lbSub'), lbCount=$('#lbCount'), lbThumbs=$('#lbThumbs');
+  let group=[], idx=0, lastFocus=null;
+  function items(g){ return $$('[data-g="'+g+'"]').filter(f=>!f.classList.contains('off')).map(f=>{const im=$('img',f);return {src:im.currentSrc||im.src,alt:im.alt,cap:im.dataset.cap||'',sub:im.dataset.sub||''};}); }
+  function show(i){
+    idx=(i+group.length)%group.length; const it=group[idx];
+    lbImg.src=it.src; lbImg.alt=it.alt; lbCap.textContent=it.cap; lbSub.textContent=it.sub;
+    lbCount.textContent=(idx+1)+' / '+group.length;
+    $$('img',lbThumbs).forEach((t,k)=>{t.classList.toggle('on',k===idx); if(k===idx) t.scrollIntoView({block:'nearest',inline:'center',behavior:reduce?'auto':'smooth'});});
+    const n=group[(idx+1)%group.length]; if(n){const pre=new Image();pre.src=n.src;}
+  }
+  function open(g,src){
+    group=items(g); if(!group.length) return;
+    lbThumbs.innerHTML=group.map((it,k)=>'<img src="'+it.src+'" alt="" data-k="'+k+'">').join('');
+    $$('img',lbThumbs).forEach(t=>t.addEventListener('click',()=>show(+t.dataset.k)));
+    lastFocus=document.activeElement; lb.classList.add('open'); document.body.classList.add('lb-lock');
+    show(Math.max(0,group.findIndex(it=>it.src===src))); $('#lbClose').focus();
+  }
+  function close(){ lb.classList.remove('open'); document.body.classList.remove('lb-lock'); lbImg.src=''; if(lastFocus) lastFocus.focus(); }
+  $$('[data-g]').forEach(f=>{ f.setAttribute('tabindex','0'); f.setAttribute('role','button'); f.setAttribute('aria-label','تكبير: '+($('img',f).dataset.cap||$('img',f).alt));
+    const go=()=>open(f.dataset.g,($('img',f).currentSrc||$('img',f).src));
+    f.addEventListener('click',go); f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}}); });
+  $('#lbClose').addEventListener('click',close);
+  $('#lbPrev').addEventListener('click',()=>show(idx-1));
+  $('#lbNext').addEventListener('click',()=>show(idx+1));
+  $('#lbStage').addEventListener('click',e=>{ if(e.target===e.currentTarget) close(); });
+  document.addEventListener('keydown',e=>{ if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') show(idx+1); else if(e.key==='ArrowRight') show(idx-1); });
+  let tx=0; $('#lbStage').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+  $('#lbStage').addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50){ dx>0?show(idx-1):show(idx+1);} },{passive:true});
 })();
 </script>
 </body>
