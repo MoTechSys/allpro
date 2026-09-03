@@ -1,6 +1,14 @@
-# prototype-home — نموذج الصفحة الرئيسية (v5.1)
+# prototype-home — نموذج الصفحة الرئيسية (v5.2)
 
 مجلد مستقل للمراجعة فقط (`noindex`). ملف واحد `index.html` + صور مصغّرة + `hero-samples.html` (عيّنات الخطوط). لا يمسّ `keif-aldiafa-web`. v4 محفوظ في git `6c2e22f`، v1 في `prototype-home-v1/` (8788).
+
+## v5.2 — فيديو الهيرو + بطاقة أصغر بزرّين خارجها + فتح كل محتوى بدقة عالية (2026-09-03)
+المصدر: صوت المالك `04-owner-messages/2026-09-03-بنر-الفيديو-وتصغير-البطاقة-وفتح-المحتوى-بدقة.md`.
+- **فيديو الهيرو عاد** (`video/hero-bg.mp4` صبّ القهوة والدخان، نفس ملف الإنتاج): `preload="none"` ويُحمَّل بعد أول رسم (`requestIdleCallback`) فلا ينافس LCP؛ يظهر بتلاشٍ فوق صورة البوستر، يتوقّف خارج الشاشة، ولا يعمل مع `prefers-reduced-motion`. على الجوال والديسكتوب معاً.
+- **البطاقة أصغر**: max-width 640→520 (600 ديسكتوب)، padding 30/22→22/18، الخطوط أصغر قليلاً؛ **الزرّان + شريط الأرقام خرجا من البطاقة** تحتها مباشرة (صف واحد، أعمالنا يمين/واتساب يسار كما R14). ارتفاع البطاقة @390: 415px (كانت ~590).
+- **فتح المحتوى بدقة**: مجلد جديد `img/full/` (48 صورة، ≤1600px، ~5.6MB) — الـLightbox يحمّل النسخة الكاملة (`/img/photos/` → `/img/full/`) مع مؤشّر تحميل ورجوع للمصغّرة عند الفشل؛ الشرائط المصغّرة تبقى خفيفة.
+- **كل عنصر له وجهته** (لا «كل شيء → نفس الصفحة»): زر «صفحة الخدمة/التقديمات/معرض الأعمال» داخل الـLightbox (`data-go`): الخدمات 12 رابطاً مختلفاً `services#hosts|safarjia|zamzam|sawas|hostesses|safarjiat|heritage-tent|counter|buffet|photo-booth|calligrapher|folkband` · التقديمات `offerings#hot|cold|dates|sweets|snacks|sandwiches|fruits|nuts|equipment|distributions|buffet` · الطاقم `services#hosts|hostesses` · الأعمال `/portfolio` · «لمن نخدم» `portfolio?type=government|corporate|private`. بلاطات الخدمات تفتح الـLightbox أولاً (بدقة) ثم زر الانتقال.
+- تدقيق Playwright (390/1440): الفيديو `ready` ويعمل (t≈2.4s, readyState 4) · الزرّان خارج البطاقة وبصف واحد · Lightbox يفتح `full/s-zamzam.webp` 720×1280 وزر → `services#zamzam` · 0 errors · 12 رابط خدمة مختلف · الطول 6993 / 7973. لقطات `reports/shots/prototype-home-v5.2-*.jpg`.
 
 ## v5.1 — تنفيذ تقرير 23: الخدمات متكاملة + إصلاح فراغ الشركاء + صور بلا شعارات جهات (2026-09-03)
 المصدر: صوت المالك `04-owner-messages/2026-09-03-مستودع-جديد-لـv5-…md` + `01-keif-aldiafa/reports/23-تحليل-متكامل-الخدمات-وواجهة-الهاتف-v5.md`.
