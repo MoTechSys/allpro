@@ -675,6 +675,27 @@ body.lb-lock{overflow:hidden}
   let tx=0; $('#lbStage').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
   $('#lbStage').addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50){ dx>0?show(idx-1):show(idx+1);} },{passive:true});
 })();
+
+/* وضع الترقيم للمراجعة: افتح الرابط مع ?mark → أرقام على كل عنصر؛ اضغط الرقم لنسخ اسمه */
+(function(){
+  if(!/[?&]mark/.test(location.search)) return;
+  const st=document.createElement('style');
+  st.textContent='.mk{position:absolute;z-index:90;background:#C9A227;color:#0B1F3A;font:700 12px/1 Almarai,sans-serif;padding:4px 7px;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,.4);pointer-events:auto;cursor:pointer;direction:ltr}.mk.sec{background:#0B1F3A;color:#E3C56B;border:1px solid #C9A227;font-size:13px}.mk-toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#0B1F3A;color:#fff;padding:8px 14px;border-radius:8px;z-index:200;font-size:13px}';
+  document.head.appendChild(st);
+  const items=[];
+  const secs=[['header','الهيدر'],['.hero','الهيرو'],['#bar','الشريط اللاصق'],['#who','لمن نخدم'],['#trust','من وثق بنا'],['#works','أعمالنا'],['#staff','الطاقم والزي'],['#offerings','التقديمات'],['#services','الخدمات'],['.cities','المدن'],['#faq','أسئلة'],['#contact','تواصل'],['footer','الفوتر']];
+  let n=0;
+  secs.forEach(([q,name])=>{const el=document.querySelector(q); if(!el) return; n++; items.push({el,label:'S'+n,name,sec:true});
+    const kids=el.querySelectorAll('h1,h2,h3,.kicker,p.sub,.cta .btn,.proof,.who,.gov,.logo,.tabs,.shot,.uni,.tile,.svc,details,.actions .btn,.tel,.assure,.cities a,.brand,.nav-right .btn,.works-foot .btn,.consent,.badges,.links');
+    let k=0; kids.forEach(c=>{ if(c.closest('.lb')) return; k++; const txt=(c.innerText||c.getAttribute('aria-label')||c.className||'').trim().split('\n')[0].slice(0,40); items.push({el:c,label:n+'.'+k,name:name+' › '+txt,sec:false}); });
+  });
+  items.forEach(it=>{ it.el.classList.add('rv','in'); const b=document.createElement('span'); b.className='mk'+(it.sec?' sec':''); b.textContent=it.label; b.title=it.name;
+    if(getComputedStyle(it.el).position==='static') it.el.style.position='relative';
+    b.style.top='4px'; b.style.insetInlineStart='4px'; it.el.appendChild(b);
+    b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation(); const t=it.label+' — '+it.name; navigator.clipboard&&navigator.clipboard.writeText(t); const o=document.createElement('div'); o.className='mk-toast'; o.textContent='نُسخ: '+t; document.body.appendChild(o); setTimeout(()=>o.remove(),1600);},true);
+  });
+  document.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));
+})();
 </script>
 </body>
 </html>
