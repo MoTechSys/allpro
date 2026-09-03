@@ -167,6 +167,120 @@
    "file": "corporate-event-dallah-hajj-transport-ceremonial-coffee.webp",
    "verdict": "COMPANY",
    "entity": "دلة لنقل الحجاج"
+  },
+  {
+   "file": "services/artistic/mobile-table/table-3.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/mobile-table/table-4.webp",
+   "verdict": "GOV",
+   "entity": "وزارة الصحة (ورقة على الحائط) — تُستبعد",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/mobile-table/table-5.webp",
+   "verdict": "CAUTION",
+   "entity": "لافتات منشأة صحية بلا شعار — تُستبعد احتياطًا",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla/dagla-3.webp",
+   "verdict": "FLAG",
+   "entity": "الشعار الوطني (نخلة وسيفان) فقط",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla/dagla-4.webp",
+   "verdict": "GOV",
+   "entity": "أمانة جدة + شعار اليوم الوطني 94 — تُستبعد",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/hizam/hizam-1.webp",
+   "verdict": "COMPANY",
+   "entity": "Mavera مافيرا",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/photo-booth/photo-booth-2.webp",
+   "verdict": "COMPANY",
+   "entity": "New Balance",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/artist/artist-1.webp",
+   "verdict": "COMPANY",
+   "entity": "Foot Locker فوت لوكر",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/heritage-tent/tent-1.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla/dagla-1.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla/dagla-5.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla/dagla-6.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/makkawi/makkawi-1.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/male/hosts/dagla-janbiya/dagla-janbiya-1.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/photo-booth/photo-booth-4.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/counter/counter-2.webp",
+   "verdict": "FLAG",
+   "entity": "الشعار الوطني على الكاونتر + رول-أب ترحيبي (Snapchat QR)",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/folkband/folkband-1.webp",
+   "verdict": "SAFE",
+   "entity": "",
+   "round": "2026-09-03-b"
+  },
+  {
+   "file": "services/artistic/heritage-tent/tent-3.webp",
+   "verdict": "CAUTION",
+   "entity": "صورة شخصية رسمية على الحائط — تُستبعد احتياطًا",
+   "round": "2026-09-03-b"
   }
+ ],
+ "policy_notes": [
+  "GOV = لا تُستخدم بلا موافقة كتابية",
+  "COMPANY = مسموحة مع وسم «شركة»",
+  "FLAG = علم/شعار وطني فقط بلا جهة — مسموحة",
+  "CAUTION = بلا جهة واضحة لكن سياق حساس — استُبعدت احتياطًا"
  ]
 }
