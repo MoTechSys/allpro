@@ -304,5 +304,5 @@
 - `index.html`: حذف CSS الدرج/السكريم/البرجر، حذف `<aside class="drawer">` والسكريم وزر البرجر، حذف كتلة JS «2) الدرج الجانبي»؛ الهيدر أصبح `.nav-row` (شعار+واتساب) + `nav.pages` (6 روابط). `--header:106px` جوال، 64px ≥900px. ملاحظة: أثناء القصّ حُذف بلوك `.btn` بالخطأ ثم أُعيد من HEAD — تحقق بصري بعده سليم.
 - `build.py`: حذف `drawer()`، `header(cur)` يولّد الروابط الست مع aria-current. الطابع v6.2.
 - الاختبارات: Playwright 12/12 (0 أخطاء، 0 hscroll، FORM True)، check_static BAD 0، Lighthouse mobile gzip: 95/96/95/96/99/98 · a11y 100 · BP 100.
-- روابط المعاينة: GitHub Pages على khadamat (انظر أدناه) + الساندبوكس 8787.
+- روابط المعاينة: الساندبوكس 8787 (6 روابط منفصلة، تعمل الآن). محاولة تفعيل GitHub Pages على khadamat عبر API فشلت (403 — صلاحية التوكن لا تشمل Pages)؛ jsDelivr/statically يقدّمان HTML كنص. المطلوب من المالك: khadamat → Settings → Pages → Branch main / (root) → الروابط تصير https://motechsys.github.io/khadamat/<page>.html (أضفت .nojekyll في khadamat استعداداً).
 - لم تتغيّر أي صورة أو شرح؛ review/ أُعيد توليده (254).
