@@ -312,6 +312,9 @@
 - **36 صفحة جديدة (42 فرعية إجمالًا):** `locations.html` + `city-{jeddah,makkah,madinah,riyadh,taif,dammam,abha,yanbu}.html` (8) + `{sababin-qahwa,qahwajiin,diyafa-munasabat}-<city>.html` (24) + `mubashirin-qahwa-jeddah.html` + `social.html` + `legal.html`.
 - **القرارات D55–D62** موثّقة في `04-owner-messages/2026-09-04-اسحب-الصفحات-الفرعية-من-keif-aldiafa-web.md` (أسماء ملفات لاتينية مسطّحة؛ مولّد واحد؛ تنقية الأرقام ووعود الوقت واسم الجهة الحكومية؛ مجمّعات صور تدور حسب المدينة + قصاصات عدّة + QR؛ 7 هيرو جديدة؛ «المدن» في الهيدر مع aria-current="true" للصفحات المحلية؛ فوتر → locations/social/legal؛ مدن الرئيسية → صفحات المدن).
 - **الملفات:** `build/local.py` (محتوى)، `build/local-data.json` (مرجع خام)، `build/build.py` (LOCAL_CSS + المولّدات، STAMP v6.3)، `build/images.py` + manifest (k-* ×5، cutouts ×6، QR، heroes +7)، `index.html` (الهيدر/الفوتر/المدن فقط).
-- **الفحص:** check_static كل الصفحات BAD 0؛ audit 0 أخطاء/0 hscroll 390+1440؛ روابط داخلية سليمة. **لم يُجرَ Lighthouse لـ v6.3 بعد** (مؤجَّل — الخطوة التالية).
+- **الفحص (مكتمل):** check_static كل الصفحات BAD 0 · Playwright 15 صفحة × (390+1440): 0 أخطاء / 0 hscroll / 0 صور مكسورة (REQFAIL hero-bg.mp4 على index جوال = إلغاء التحميل المؤجّل للفيديو عند الالتقاط، معروف) · Lighthouse جوال (gzip 8788): sababin-qahwa-jeddah 99 · city-jeddah 98 · locations 98 · social 96 · legal 99 — إتاحة 100 / ممارسات 100 / SEO 63 (noindex مقصود) · CLS 0.
+- **إصلاح بعد المراجعة البصرية:** social.html كان يعرض الرقم بصيغة +966 50 825 2134 → وُحِّد إلى `WA_DISPLAY` 0508252134 مع رابط tel (سياسة الرقم الواحد).
+- **الملاحظات البصرية:** أسفل اللقطات الكاملة أسود = `.rv` reveal لا يُطلَق في الالتقاط الكامل (موجود منذ v6 في about/services)، ليس عيباً في التخطيط.
 - **keif-aldiafa-web (/tmp/kaw):** قراءة فقط، لم يُعدَّل.
-- **المتبقي:** Lighthouse عينة (≥90 / a11y 100)، review.py ضمّ الصفحات الجديدة لصفحة المراجعة، تسجيلات أحمد، «جناح فندق»، partners +24، D31–D34/D39، تفعيل GitHub Pages على khadamat (المالك).
+- **review.py + audit_playwright.py** ضُمّت لهما الصفحات الجديدة (6 عيّنات مراجعة / 9 صفحات تدقيق).
+- **المتبقي:** تسجيلات أحمد، «جناح فندق»، partners +24، D31–D34/D39، تفعيل GitHub Pages على khadamat (المالك).
