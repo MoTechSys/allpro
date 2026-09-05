@@ -34,7 +34,7 @@ assert "if(fab && hero){" in SCRIPT, 'fab patch failed'
 WA_SVG = re.search(r'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17\.5[^<]*</svg>', IDX).group(0)
 ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>'
 HINT = '<span class="hint rv">اسحب لليسار<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m7-7-7 7 7 7"/></svg></span>'
-STAMP = 'v6.7 · 2026-09-05'
+STAMP = 'v6.8 · 2026-09-05'
 
 def wa(text, cls='btn btn-wa', label='تواصل عبر واتساب', ev='wa'):
     return f'<a class="{cls}" href="https://wa.me/{WA_NUM}?text={U.quote(text)}" target="_blank" rel="noopener" data-ev="{ev}">{WA_SVG}{label}</a>'
@@ -782,7 +782,9 @@ def master_page(rec):
     cityp = city_page(c['slug'])
     # 1) الهيرو — الوعد + واتساب + الأرقام (فوق الطيّة)؛ فئات العملاء داخل .pts (D71: أُدمج «لمن نخدم» هنا)
     crumbs = '<span>›</span>'.join([f'<a href="index.html">الرئيسية</a>', f'<a href="locations.html">المدن</a>', f'<a href="{cityp}">{ar}</a>', f'<span>{s["ar"]} {ar}</span>'])
-    slides = ''.join(f'<img class="slide" src="img/photos/{n}.webp" alt="" {sz(n)} loading="lazy" decoding="async">' for n in HERO_SLIDES.get((s['slug'], c['slug']), [])[:3])
+    pool = HERO_SLIDES.get((s['slug'], c['slug'])) or [x for x in (HERO_POOL[s['slug']][ci % 3:] + HERO_POOL[s['slug']][:ci % 3] + CITY_HERO[ci:] + CITY_HERO[:ci]) if x != hero]   # D95: شرائح تختلف بحسب الخدمة والمدينة
+    seen = []; [seen.append(x) for x in pool if x not in seen]
+    slides = ''.join(f'<img class="slide" src="img/photos/{n}.webp" alt="" {sz(n)} loading="lazy" decoding="async">' for n in seen[:3])
     body = f"""<section class="hero hero-l hero-anim" aria-label="{esc(s['ar'] + ' في ' + ar)}">
   <div class="bg" aria-hidden="true">{hero_img(hero, '')}<div class="slides">{slides}</div></div>
   <div class="wrap">
@@ -862,7 +864,7 @@ MASTER_JS = '''<script>
 })();
 </script>'''
 
-MASTER_PAGES = {('qahwajiin', 'jeddah')}   # D63: النموذج المعروض للاعتماد — بعد الموافقة: كل الأزواج (LOCAL_SERVICES × CITIES)
+MASTER_PAGES = {(s['slug'], c['slug']) for s in LOCAL_SERVICES for c in CITIES}   # D95 (v6.8): النموذج معمَّم على 24 صفحة خدمة×مدينة (كان qahwajiin-jeddah فقط — D63)
 
 def build_local_all():
     out = {'locations.html': build_locations(), 'social.html': build_social(), 'legal.html': build_legal(), 'mubashirin-qahwa-jeddah.html': local_page(intent_content())}
