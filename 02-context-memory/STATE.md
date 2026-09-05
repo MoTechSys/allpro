@@ -318,3 +318,11 @@
 - **keif-aldiafa-web (/tmp/kaw):** قراءة فقط، لم يُعدَّل.
 - **review.py + audit_playwright.py** ضُمّت لهما الصفحات الجديدة (6 عيّنات مراجعة / 9 صفحات تدقيق).
 - **المتبقي:** تسجيلات أحمد، «جناح فندق»، partners +24، D31–D34/D39، تفعيل GitHub Pages على khadamat (المالك).
+
+
+## 2026-09-05 — v6.4 الصفحة النموذجية «قهوجيين جدة» (D63–D70)
+- رسالة المالك محفوظة: `04-owner-messages/2026-09-05-هيكلية-صفحة-واحدة-قهوجيين-جدة-نموذج-معتمد.md`.
+- الخطوات: (1) تنظيف كتلة v6.3 المكرّرة في build.py (مخرجات مطابقة) → (2) إضافة `_home_section`, `MASTER_CSS`, `MASTER_HERO`, `master_page`, `MASTER_PAGES`, تبديل الحلقة في `build_local_all`, `sec_head(hint=)` → (3) STAMP v6.4 → (4) build/review(267)/check_static(BAD 0) → (5) تسجيل الصفحة في review.py PAGES/ORDER و audit_playwright PAGES → (6) audit 390/1440: 0 أخطاء، 0 hscroll، 0 صور مكسورة → (7) Lighthouse mobile perf 99 / a11y 100 / BP 100 / SEO 63 / CLS 0 → (8) تقرير 19 + README.
+- القرارات: D63 النموذج qahwajiin-jeddah فقط؛ D64 مولّد واحد + قصّ الشركاء/الزي من index.html؛ D65 هيرو picture ثابت pf-eq-7؛ D66 عيّنات 8/8/6/5; D67 لا JS جديد؛ D68 لا أسعار؛ D69 تخصيص نصّي؛ D70 خريطة Next.js (تقرير 19). التالي الحرّ: **D71**.
+- التعميم بعد الاعتماد: `MASTER_PAGES = {(s['slug'], c['slug']) for s in LOCAL_SERVICES for c in CITIES}`.
+- بانتظار المالك: اعتماد النموذج؛ (أقدم) تسجيلات أحمد/جدول التسمية؛ D31–D34، D39؛ «جناح فندق»؛ +24 شريك؛ GitHub Pages لـ khadamat.
