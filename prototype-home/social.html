@@ -566,7 +566,7 @@ body.lb-lock{overflow:hidden}
 </head>
 <body>
 
-<div class="proto">نموذج تجريبي للمراجعة — ليس الموقع الفعلي · v6.5 · 2026-09-05</div>
+<div class="proto">نموذج تجريبي للمراجعة — ليس الموقع الفعلي · v6.6 · 2026-09-05</div>
 <header>
   <div class="wrap nav">
     <div class="nav-row">
@@ -709,7 +709,7 @@ body.lb-lock{overflow:hidden}
   // 3) شركاء النجاح: 12 ظاهرة على الجوال ثم «عرض الكل»
   const logos=$('#logos'), moreBtn=$('#logosMore');
   const st=document.createElement('style'); st.textContent='@media (max-width:899px){.logos.collapsed .logo:nth-child(n+13){display:none}}.more-row{display:flex;justify-content:center;margin-top:12px}@media (min-width:900px){.more-row{display:none}}.more-row .btn{border:1px solid rgba(197,160,89,.5);color:var(--ink);background:#fff}'; document.head.appendChild(st);
-  if(moreBtn&&logos) moreBtn.addEventListener('click',()=>{ const open=logos.classList.toggle('collapsed'); moreBtn.textContent=open?'عرض كل الشركاء (24)':'إظهار أقل'; moreBtn.setAttribute('aria-expanded',String(!open)); });
+  if(moreBtn&&logos) moreBtn.addEventListener('click',()=>{ const open=logos.classList.toggle('collapsed'); moreBtn.textContent=open?'عرض كل الشركاء (23)':'إظهار أقل'; moreBtn.setAttribute('aria-expanded',String(!open)); });
 
   // 4) زر واتساب الطافي: مخفي في الهيرو (فيه زر واتساب) وفي قسم التواصل
   // فيديو الهيرو: يُحمَّل بعد أول رسم ويعمل عند الظهور فقط
