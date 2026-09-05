@@ -405,3 +405,14 @@
 - الفحص: build 41 / review 275 / BAD 0 · Playwright 390+1440: 0 أخطاء، 0 hscroll، ارتفاع البطاقة 78px، الأيقونة 56px، الأومنتريكس يعمل ثم يُنظَّف · Lighthouse جوال contact: perf 98 / a11y 100 / bp 100 (LCP 2.3s، CLS 0).
 - git: allpro `e20e43b`؛ khadamat مُزامَن.
 - **القرار التالي الحر: D101.**
+
+## 2026-09-05 — صفحة الروابط المستقلة `links.html` للباركود الموحّد (طلب المالك) — D101
+- الرسالة حرفيًا: `04-owner-messages/2026-09-05-صفحة-links-مستقلة-شعار-وبطاقات-فقط-للباركود.md` («الشعار وهذه البطائق فقط… لا البنر العلوي ولا السفلي… باركود موحد بالرابط المباشر»).
+- **D101 `links.html`** (`build_links()` + `LINKS_CSS`): وثيقة مستقلة 23KB — بلا `.proto`، بلا رأس الموقع، بلا فوتر، بلا FAB، بلا لايت بوكس ولا سكربت الرئيسية. CSS مقتطع: `@font-face + :root + reset` من index + `.grain` + `CONTACT_CSS` + `LINKS_CSS`. المحتوى: شعارنا بمدارَيه → «كيف الضيافة» → البطاقات التسع (نفس D100) → سطر صغير «الموقع الرئيسي · © 2026 · س.ت 7033069720». الأومنتريكس يعمل (JS مقتطع بلا منطق النموذج). على السطح: عمود واحد 560px (link‑in‑bio) لا عمودان.
+- **إعادة هيكلة بلا تغيير**: البطاقات والرأس خرجا إلى `contact_channels(src)` مشتركة بين contact و links (`src='links'` → بلا فتات خبز، ورسالة واتساب تقول «من صفحة الروابط») — `contact.html` بعد الاستخراج **مطابق بايتًا ببايت** (diff 0).
+- **الباركود** `build/qr.py [URL]` → `prototype-home/qr/`: `links-qr.svg` (متجه أسود/أبيض للطباعة)، `links-qr-1024.png` (شعار في المنتصف، تصحيح H)، `links-qr-card-1080.png` (بطاقة 1080×1350 داكنة/ذهبية بالشعار + «امسح الباركود واختر قناة التواصل» + 0508252134 · keifaldiafa.com/links). الرابط الافتراضي **https://keifaldiafa.com/links** (الإنتاج المستقبلي — يتطابق مع مسار Next.js `app/links`). تحقُّق: OpenCV يفكّ كلا الملفين إلى الرابط الصحيح رغم الشعار. ملاحظة: khadamat Pages غير مفعّل (404) فلا رابط نموذج عام للباركود بعد؛ عند تفعيله: `python3 build/qr.py https://motechsys.github.io/khadamat/links.html`.
+- تحسين مقروئية: `.ch-tx small` 0.8rem و`.lfoot` 0.8rem (Lighthouse font-size كان 53% → 100%).
+- الفحص: build 42 (41 + links) / review 275 / BAD 0 · Playwright links 390+1440: 0 أخطاء، 0 طلبات فاشلة، 9 بطاقات، لا proto/header/fab/footer، بطاقة 78px، الضغط على سناب → fire+flash → popup snapchat · contact 390+1440 بلا تغيّر · Lighthouse جوال: **links 98/100/100** (seo 60 = noindex)، contact 98/100/100.
+- `audit_playwright.py` PAGES + `links.html` (20 صفحة).
+- git: allpro `d939be1` + التوثيق؛ khadamat مُزامَن.
+- **القرار التالي الحر: D102.**
