@@ -424,3 +424,11 @@
 - الفحص: build/BAD 0 · links+contact 390/1440: 0 أخطاء، 0 hscroll · Lighthouse جوال links 97/100/100.
 - git: allpro (هذا الـcommit + التوثيق)؛ khadamat مُزامَن.
 - **القرار التالي الحر: D103.**
+
+## 2026-09-05 — أمر المالك «وثّق كل شيء وافحص — لأي وكيل بعدك» → فحص شامل + HANDOFF v6.9
+- الرسالة حرفيًا: `04-owner-messages/2026-09-05-وثق-كل-شي-وافحص-لأي-وكيل-بعدك.md`.
+- **الفحص الشامل على HEAD**: build 42 / review 275 / check_static BAD 0 · `audit_playwright.py` **40/40** (20 صفحة × 390/1440) errors []، hscroll 0، صور مكسورة 0، LB/فلاتر/نموذج تعمل · Lighthouse جوال: index 93 · contact 98 · links 99 · city-jeddah 97 · qahwajiin-jeddah 98 · services 99 — a11y 100 وbp 100 في الكل.
+- خلل أُصلح: `audit_playwright.py` كان يكتب اللقطات نسبيًا إلى cwd (أنشأ `prototype-home/01-keif-aldiafa/` بالخطأ) → صار مستقلًا عن cwd (`ROOT`) واللقطات نُقلت إلى `01-keif-aldiafa/reports/shots/v6/`.
+- **التوثيق**: `02-context-memory/HANDOFF-2026-09-05-v6.9.md` (المالك وأسلوبه، المستودعات، السياسات P1–P10، الجرد 43 ملفًا، ترتيب الأقسام، contact/links/الأومنتريكس/الباركود، خريطة الكود، دورة العمل بالأوامر، نتائج الفحص، D55–D102، المهام المفتوحة، البيئي الذي يُعاد) · `BOOTSTRAP.md` يشير إليه أولًا · `README.md` الجذر يحمل الحالة · `prototype-home/README.md` يحيل إليه · التقرير 30 (contact/links/QR + خريطة Next.js لهذا الجزء).
+- git: allpro (هذا الـcommit)؛ khadamat مُزامَن.
+- **القرار التالي الحر: D103.**
